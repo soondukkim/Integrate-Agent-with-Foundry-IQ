@@ -1,4 +1,4 @@
-# Build AI Agents with Portal and VS Code (한글 가이드)
+# Integrate Agent with Foundry IQ (한글 가이드)
 
 원문: [Integrate an AI agent with Foundry IQ | Develop AI Agents in Azure](https://microsoftlearning.github.io/mslearn-ai-agents/Instructions/Exercises/04-integrate-agent-with-foundry-iq.html)
 
