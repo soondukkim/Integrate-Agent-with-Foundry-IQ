@@ -118,7 +118,13 @@ Foundry Portal 에서 에이전트와 연결할 지식 기반을 생성합니다
    <img width="2000" height="468" alt="image" src="https://github.com/user-attachments/assets/07cf6af0-bee2-4056-af93-f1a77d77bfb8" />
 
 1. 아래의 **연결된 리소스** 탭에서 **CognitiveSearch** 행을 선택하고, 인증 섹션에서 **인증 편집** 을 클릭합니다.
+
+   <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/c7e7ae24-0a06-4da9-b38d-74033e2821fe" />
+
 1. 인증 유형에서 **API 키** 로 변경하고, 메모장에 복사해 놓은 AI Search (Foundry IQ) 의 키를 **API 키** 항목에 **붙여넣기** 합니다.
+
+   <img width="597" height="273" alt="image" src="https://github.com/user-attachments/assets/6f974b9c-b0dc-45ef-9f0b-6ea809e55ab5" />
+
 1. 인증 편집 화면을 **저장** 합니다.
 
 이제 Foundry IQ 설정이 완료되었습니다.
