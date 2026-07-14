@@ -17,7 +17,7 @@
     - **Location**: *East US*\*
     - *Foundry 에서 제공하는 모든 항목을 탐색할 수 있도록 권장 리소스를 설정합니다.* 항목을 **활성화** 합니다.
 
-  <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/a47f3b3e-4d77-47a0-a3b9-2688cf767f62" />
+    <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/a47f3b3e-4d77-47a0-a3b9-2688cf767f62" />
 
 1. **만들기** 를 선택하고 프로젝트가 생성될 때까지 기다리세요. 몇 분 정도 걸릴 수 있습니다.
 1. 프로젝트가 생성되면 프로젝트 홈 페이지를 보게 됩니다.
