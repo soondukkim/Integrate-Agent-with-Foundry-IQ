@@ -1,26 +1,34 @@
-## Configure your data and Foundry IQ
+## 데이터 Foundry IQ 구성
 
-Now you'll configure your agent that uses Foundry IQ to search the knowledge base.
+이제 Foundry IQ를 사용해 지식 베이스를 검색하는 에이전트를 설정하면 됩니다.
 
-1. First, give your agent the following instructions:
+1. 먼저, 에이전트에게 다음과 같은 지침을 주세요:
 
     ```
-    You are a helpful AI assistant for Contoso, specializing in outdoor camping and hiking products. 
-    You must ALWAYS search the knowledge base to answer questions about our products or product 
-    catalog. Provide detailed, accurate information and always cite your sources.
-    If you don't find relevant information in the knowledge base, say so clearly.
+    당신은 아웃도어 캠핑 및 하이킹 제품 전문 기업인 콘토소(Contoso)의 친절한 AI 도우미입니다.
+    제품 또는 제품 카탈로그에 대한 질문에 답변할 때는 항상 지식 기반을 검색해야 합니다.
+    자세하고 정확한 정보를 제공하고 출처를 반드시 명시하세요.
+    지식 기반에서 관련 정보를 찾지 못한 경우에는 명확하게 알려주세요.
     ```
 
-1. Select **Save** to save your current agent configuration.
-1. Then, in the **Knowledge** section, expand the **Add** dropdown, and select **Connect to Foundry IQ**.
-1. In the Foundry IQ setup window, select **Connect to an AI Search resource** and then **Create new resource** which should open up a dialog to create the resource.
+1. 현재 에이전트 구성을 저장하려면 **저장** 을 클릭하세요.
+   
+   <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/9f2ca54b-38a8-40a2-8bb9-301d237f4e5b" />
+
+1. 그 다음 **지식** 섹션에서 **추가** 드롭다운을 펼친 후 **Foundry IQ 에 연결** 을 선택하세요.
+
+   <img width="520" height="213" alt="image" src="https://github.com/user-attachments/assets/be59d77d-4d14-4854-bacb-d8a801273ca2" />
+
+1. Foundry IQ 에 연결 창에서 **AI Search 리소스에 연결** 을 선택하세요.
+1. 지식(Foundry IQ) 창에서 **새 리소스 만들기** 를 선택하면 자원을 생성하는 대화상자가 열립니다.
 1. Create a search resource with the default settings:
-    - **Resource name**: *A globally unique name*
-    - **Subscription**: *Your Azure subscription*
-    - **Resource group**: *Use the same resource group as your project*
-    - **Region**: *The same location as your project*
-    - **Pricing tier**: Free *if available, otherwise choose Basic*
-    - **Foundry IQ Knowledge base capabilities**: Pause til next month
+    - **리소스 이름**: *전 세계적으로 고유한 이름입니다 (예: OO-contosodemo-srch)*
+    - **구독**: *당신의 Azure 구독*
+    - **리소스 그룹**: *프로젝트와 동일한 자원 그룹을 사용하세요.*
+    - **지역**: *프로젝트와 같은 위치(East US)를 선택합니다. 단, 해당 지경의 용량이 가득 찬 경우 Korea Central 을 선택해도 무방합니다.*
+    - **가격 등급**: *가능하면 무료이며, 그렇지 않으면 기본 요금을 선택하세요.*
+    - *무료 월별 허용량을 초과하는 에이전트 검색 사용량에는 추가비용이 발생하고 Azure AI Search를 통해 청구됨을 확인합니다.* 를 **체크** 합니다.
+    - **만들기** *버튼을 클릭하세요*
 
 Now you'll upload sample product information documents to connect to with Foundry IQ.
 
