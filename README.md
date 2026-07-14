@@ -1,21 +1,22 @@
 # Build AI Agents with Portal and VS Code (한글 가이드)
 
-원문: [Build AI agents with portal and VS Code | Develop AI Agents in Azure](https://microsoftlearning.github.io/mslearn-ai-agents/Instructions/Exercises/01-build-agent-portal-and-vscode.html)
+원문: [Integrate an AI agent with Foundry IQ | Develop AI Agents in Azure](https://microsoftlearning.github.io/mslearn-ai-agents/Instructions/Exercises/04-integrate-agent-with-foundry-iq.html)
 
 ## Microsoft Foundry 소개
 
 <img src="https://ai.azure.com/favicon.ico" alt="Microsoft Foundry logo" width="64"/>
 
-Microsoft Foundry는 엔터프라이즈 환경에서 AI 에이전트를 설계, 개발, 테스트, 배포까지 통합적으로 진행할 수 있도록 지원하는 개발 플랫폼입니다.
+Microsoft Foundry는 엔터프라이즈 환경에서 AI 에이전트를 구축(Build), 배포(Deploy), 운영(Operate) 및 거버넌스(Govern)할 수 있도록 모델, 에이전트, 지식, 도구, 보안 기능을 통합 제공하는 엔터프라이즈 AI 플랫폼 입니다.
 
-- 프로젝트 단위로 모델, 데이터, 도구, 에이전트를 체계적으로 관리할 수 있습니다.
-- 포털과 VS Code(Foundry Toolkit)를 연계해 로우코드와 코드 기반 개발을 함께 활용할 수 있습니다.
-- 파일 검색, 코드 인터프리터, 평가/관측 기능을 통해 실무형 에이전트를 빠르게 반복 개선할 수 있습니다.
+Foundry IQ 는 엔터프라이즈 환경의 지식과 데이터를 AI Agent 에 연결하여, 신뢰할 수 있는 근거 기반 답변과 업무 맥락 이해를 가능하게 하는 Microsoft 의 지능 계층(Intelligence Layer) 입니다.
+- 기업의 지식과 데이터를 AI Agent 에 연결하여, 에이전트가 단순 LLM 추론이 아닌 조직의 실제 문서와 데이터를 기반으로 답변할 수 있도록 합니다.
+- 엔터프라이즈 RAG(Retrieval-Augmented Generation) 방식으로 동작하여, 질문 시 관련 정보를 검색한 후 이를 근거로 답변을 생성하고 출처를 함께 제공합니다.
+- 에이전트 서비스와 통합되어 AI Agent 가 기업 지식 뿐만 아니라 MCP 및 1,400 개 이상의 커넥터를 통해 다양한 비즈니스 시스템의 정보까지 활용할 수 있습니다.
+
 
 ## Hands-on Lab 개요
 
-이 실습에서는 Microsoft Foundry 포털과 Foundry Toolkit for VS Code 확장을 함께 사용하여 AI 에이전트 솔루션을 구성합니다.
-먼저 포털에서 그라운딩 데이터와 기본 도구를 포함한 에이전트를 만들고, 이후 VS Code에서 프로그래밍 방식으로 에이전트와 상호작용하며 코드 인터프리터 같은 고급 기능을 활용합니다.
+이 연습에서는 Microsoft Foundry 포털을 사용해 Foundry IQ와 통합되어 지식 베이스에서 정보를 검색하고 검색하는 에이전트를 만들 것입니다. 검색 자원을 만들고, 샘플 데이터로 지식 베이스를 구성하며, 포털에서 에이전트를 만든 후 Visual Studio Code에서 프로그래밍적으로 상호작용합니다
 
 예상 소요 시간: 약 45분
 
