@@ -1,11 +1,11 @@
 ## 에이전트 만들기
 
 1. Foundry Portal 홈페이지에서 **에이전트 빌드** 영역에서 **빌드시작** 버튼 클릭합니다.  또는 오른쪽 상단 메뉴에서 **빌드**를 클릭합니다.
-2. 
+   
    <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/f537ba40-d439-4fc0-b013-60fa1bdbabdf" />
 
 1. 에이전트를 설명적인 이름으로 만드세요 `OO-product-expert-agent`.
-2. 
+   
    <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/4823c2ca-24e9-4649-98da-7d5fc80c0d27" />
 
 
