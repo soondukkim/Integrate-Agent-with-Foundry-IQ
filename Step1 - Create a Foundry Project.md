@@ -1,4 +1,4 @@
-## Create a Foundry project
+## 파운드리 프로젝트 만들기
 
 새로운 Foundry 경험을 활용한 Foundry 프로젝트를 만드는 것부터 시작해 보겠습니다.
 
@@ -18,7 +18,7 @@
 
     > \* 일부 Azure AI 자원은 지역 모델 할당량에 의해 제약을 받습니다. 작업 후반에 할당량 한도를 초과할 경우, 다른 지역에 자원을 추가해야 할 수도 있습니다.
     > 
-<img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/a47f3b3e-4d77-47a0-a3b9-2688cf767f62" />
+  <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/a47f3b3e-4d77-47a0-a3b9-2688cf767f62" />
 
 1. **만들기** 를 선택하고 프로젝트가 생성될 때까지 기다리세요. 몇 분 정도 걸릴 수 있습니다.
 1. 프로젝트가 생성되면 프로젝트 홈 페이지를 보게 됩니다.
