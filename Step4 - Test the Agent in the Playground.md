@@ -23,18 +23,17 @@
 웹앱 미리보기를 통해서도 확인해 보세요.
 1. **게시** > **웹앱 미리보기** 를 선택하세요.
 
-   <img width="480" height="385" alt="image" src="https://github.com/user-attachments/assets/e17b9eec-8f58-4525-832f-950e9fe7f7a5" />
-
+      <img width="480" height="385" alt="image" src="https://github.com/user-attachments/assets/e17b9eec-8f58-4525-832f-950e9fe7f7a5" />
    
-   <br>
+      <br>
 
-    - '캠핑 용품에는 어떤 것들이 있나요?'
+    - `캠핑 용품에는 어떤 것들이 있나요?`
          
-   <br>
-
-  <img width="2000" height="1075" alt="image" src="https://github.com/user-attachments/assets/92827415-0ef2-46d3-ac98-a949fde3c346" />
-    
-<br>
+     <br>
+   
+     <img width="2000" height="1075" alt="image" src="https://github.com/user-attachments/assets/92827415-0ef2-46d3-ac98-a949fde3c346" />
+       
+     <br>
 
 답변을 검토하고 다음을 참고하세요 :
     - 에이전트는 지식 기반에서 구체적인 정보를 제공합니다
@@ -61,13 +60,16 @@ Foundry IQ 옵션을 변경하고 테스트해 보세요.
     - `캠핑 용품에는 어떤 것들이 있나요?`
     - `데이팩과 익스페디션 백팩의 차이점은 무엇인가요?`
 
+<br>
+
 Azure Portal 에서 Foundry IQ 를 테스트해 보세요.
 
 1. Azure Portal 'portal.azure.com' 탭으로 이동하세요.
 1. 상단의 검색 창에서 **AI Search(Foundry IQ)** 를 검색하고, 만들어 놓은 **Search Service(Foundry IQ)** 를 선택하세요.
 
-<br>
-   <img width="1532" height="469" alt="image" src="https://github.com/user-attachments/assets/b676c600-6adf-4da2-867d-2912f34154df" />
+   <br>
+      <img width="1532" height="469" alt="image" src="https://github.com/user-attachments/assets/b676c600-6adf-4da2-867d-2912f34154df" />
+   <br>
 
 1. **에이전트 검색** > **지식 기반** 에서 만들어 놓은 지식 기반 'kb-contosoproducts-OO' 을 선택하세요.
 1. 지식 기반의 플레이그라운드를 확인할 수 있습니다.
@@ -85,16 +87,16 @@ Azure Portal 에서 Foundry IQ 를 테스트해 보세요.
 1. 왼쪽의 **검색** 섹터에서 **추론 활동** 을 **최소** 또는 **중간** 으로 변경하면서 테스트 및 디버그를 참조해 보세요.
    
 
-1. 답변을 검토하고 다음을 참고하세요 :
+답변을 검토하고 다음을 참고하세요 :
     - Foundry IQ 옵션 변경에 따라 답변이 달라집니다.
     - Azure Portal 의 지식 기반에서 더 구체적인 참조자료를 확인 및 디버그를 할 수 있습니다.
 
-1. 다음 정보를 찾아 메모장에 복사하세요. (다음 실습에서 앱에서 에이전트를 연결할 때 필요합니다):
+<br>
+다음 정보를 찾아 메모장에 복사하세요. (다음 실습에서 앱에서 에이전트를 연결할 때 필요합니다):
     - **에이전트 이름**: 앞에서 만든 이름입니다 (`OO-product-expert-agent`)
     - **프로젝트 엔드포인트**: 프로젝트 설정 또는 홈페이지에서 찾을 수 있습니다
-<br>
-
-   <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/0653f2ae-6459-4a5e-b7ed-c2611180a2f8" />
+   <br>
+      <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/0653f2ae-6459-4a5e-b7ed-c2611180a2f8" />
 
 
 ## 다음 단계
