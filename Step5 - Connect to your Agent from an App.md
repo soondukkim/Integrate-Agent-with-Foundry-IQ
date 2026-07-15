@@ -14,10 +14,11 @@
 
 1. **Microsoft Foundry Resources** 에서 **Set Default Project** 을 선택하고 이전에 만든 프로젝트를 선택하세요.
 1. 프로젝트 섹션을 확장하세요. **Prompt Agents** 에서 에이전트 `OO-product-expert-agent` 를 선택해 **Agent Builder** 창을 엽니다.
-1. **Tools** 섹션에서 **Azure AI Search** 도구를 추가한 후, 이전에 만든 연결과 지식 베이스를 선택하세요.
+1. **Tools** 섹션에서 앞에서 생성한 지식을 확인할 수 있습니다.  해당 지식의 오른쪽에 세점을 클릭하여 **Configure** 를 클릭합니다.
+   <img width="1331" height="679" alt="image" src="https://github.com/user-attachments/assets/b0da31b4-d408-4105-9ef2-4c24838d5d6a" />
 
-    > **참고**: 에이전트가 여러 도구를 나열할 수 있습니다. Foundry 포털은 기본적으로 새로운 에이전트에게 **Web Search** 도구를 추가하므로, 다른 도구 대신 **Azure AI Search** 도구의 메뉴(세 점)를 지식 베이스에 선택하세요.
-1. **도구 사용 전에 승인 필요** 드롭다운에서 **모든 도구에 대한 승인 요청** 을 선택하고 요청이 뜨면 변경 사항을 저장하세요.
+1. **도구 사용 전에 승인 필요** 드롭다운에서 **Ask for approval for all tools** 을 선택하고 **저장**하세요.
+   <img width="437" height="330" alt="image" src="https://github.com/user-attachments/assets/a8ca070d-9287-42b7-a063-a6f9c32ba97b" />
 
 이제 에이전트는 Foundry IQ를 사용해 지식 베이스를 검색할 때마다 승인을 요청하게 되며, 다음에 완료한 클라이언트 앱이 이를 처리합니다.
 
