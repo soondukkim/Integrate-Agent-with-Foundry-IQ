@@ -1,4 +1,4 @@
-## Foundry > 에이전트 과 AI Search > 지식기반 에서 테스트
+## Foundry Portal 과 Azure Portal 에서 Foundry IQ 테스트
 
 코드로 연결하기 전에 포털 플레이그라운드에서 에이전트를 테스트해 보세요.
 
