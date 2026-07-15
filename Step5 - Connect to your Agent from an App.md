@@ -33,7 +33,9 @@
    ```
    git clone https://github.com/MicrosoftLearning/mslearn-ai-agents   
 
-   <img width="2000" height="1043" alt="image" src="https://github.com/user-attachments/assets/f944c93b-eb99-4293-a61e-c12a27e290de" />
+<br>
+
+<img width="2000" height="1043" alt="image" src="https://github.com/user-attachments/assets/f944c93b-eb99-4293-a61e-c12a27e290de" />
 
 <br>
 
