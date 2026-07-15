@@ -29,22 +29,25 @@
 
 이제 Visual Studio Code를 사용해 앱을 개발해 봅시다. 귀하의 앱 코드 파일은 GitHub 저장소에 제공되었습니다.
 
-1. 명령 프롬프트에서 **git clone** 명령을 사용해서 로컬 폴더에 소스를 복제하세요 (어느 폴더든 상관 없습니다.) `https://github.com/MicrosoftLearning/mslearn-ai-agents`
+1. 명령 프롬프트에서 **git clone** 명령을 사용해서 로컬 폴더에 소스를 복제하세요. (어느 폴더든 상관 없습니다)
    ```
-   git clone https://github.com/MicrosoftLearning/mslearn-ai-agents
-   
-   
-1. When the repository has been cloned, open the folder in Visual Studio Code.
+   git clone https://github.com/MicrosoftLearning/mslearn-ai-agents   
 
-    > **Note**: If Visual Studio Code shows you a pop-up message prompting you to trust the code you are opening, click **Yes, I trust the authors** option to continue.
+   <img width="2000" height="1043" alt="image" src="https://github.com/user-attachments/assets/f944c93b-eb99-4293-a61e-c12a27e290de" />
 
-1. Wait while additional files are installed to support the Python code projects in the repo (if prompted).
+<br>
 
-    > **Note**: If you are prompted to install required assets to build and debug, select **Not Now**.
+1. 소스가 복제되면 Visual Studio Code 에서 'C:\Download\mslearn-ai-agents\Labfiles\04-integrate-agent-with-foundry-iq' 폴더를 엽니다.
 
-1. In the **Explorer** pane, expand the **Labfiles/04-integrate-agent-with-foundry-iq/Python** folder.
+    > **참고**: Visual Studio Code에서 열려는 코드를 신뢰하라는 팝업 메시지가 뜨면, **Yes, I trust the authors** 옵션을 클릭해 계속 진행하세요.
 
-    The provided files include application code, configuration settings, and the agent client starter code.
+1. 추가 파일이 설치되어 레포 내 파이썬 코드 프로젝트를 지원할 때까지 기다려야 합니다(요청이 있을 경우).
+
+    > **참고**: 빌드 및 디버깅을 위해 필요한 자산을 설치하라는 메시지가 뜨면, **Not Now** 를 선택하세요.
+
+1. **Explorer** 창에서, **Labfiles/04-integrate-agent-with-foundry-iq/Python** 폴더를 펼칩니다.
+
+    제공된 파일에는 애플리케이션 코드, 설정 설정, 에이전트 클라이언트 스타터 코드가 포함되어 있습니다.
 
 ### Configure the application settings
 
