@@ -1,6 +1,6 @@
 ## Foundry Portal 과 Azure Portal 에서 Foundry IQ 테스트
 
-# Foundry Portal 플레이그라운드에서 에이전트를 테스트해 보세요.
+### Foundry Portal 플레이그라운드에서 에이전트를 테스트해 보세요.
 
 1. **빌드** > **에이전트** 페이지에서 생성한 에이전트를 선택하세요.
 1. 에이전트 페이지에서 플레이그라운드 탭이 선택된 것을 볼 수 있을 것입니다. 지식 섹션을 찾아 앞에서 생성한 **지식 기반 (Foundry IQ)** 을 선택하고 **저장** 하세요.
@@ -20,7 +20,8 @@
 
     <img width="1690" height="1037" alt="image" src="https://github.com/user-attachments/assets/bdacfdd3-74ed-4d52-a94b-3fe3ee94a06a" />
 
-웹앱 미리보기를 통해서도 확인해 보세요.
+### 웹앱 미리보기를 통해서도 확인해 보세요.
+
 1. **게시** > **웹앱 미리보기** 를 선택하세요.
 
       <img width="480" height="385" alt="image" src="https://github.com/user-attachments/assets/e17b9eec-8f58-4525-832f-950e9fe7f7a5" />
@@ -41,7 +42,7 @@
     - 에이전트은 제품 정보에 집중합니다.  <br>
 
 
-Foundry IQ 옵션을 변경하고 테스트해 보세요.
+### Foundry IQ 옵션을 변경하고 테스트해 보세요.
 
 1. 지식 메뉴에서 생성한 **지식 기반 (Foundry IQ)** 를 선택하세요.
 1. 지식 기반 옵션을 변경하세요 :
@@ -62,7 +63,7 @@ Foundry IQ 옵션을 변경하고 테스트해 보세요.
 
 <br>
 
-Azure Portal 에서 Foundry IQ 를 테스트해 보세요.
+### Azure Portal 에서 Foundry IQ 를 테스트해 보세요.
 
 1. Azure Portal 'portal.azure.com' 탭으로 이동하세요.
 1. 상단의 검색 창에서 **AI Search(Foundry IQ)** 를 검색하고, 만들어 놓은 **Search Service(Foundry IQ)** 를 선택하세요.
