@@ -27,9 +27,10 @@
 
    <img width="480" height="385" alt="image" src="https://github.com/user-attachments/assets/e17b9eec-8f58-4525-832f-950e9fe7f7a5" />
 
-1. 
 
     - `캠핑 용품에는 어떤 것들이 있나요?`
+
+<br>
 
     <img width="2000" height="1075" alt="image" src="https://github.com/user-attachments/assets/70bda2c5-0c11-4c76-9aa0-a492de4540cd" />
 <br>
@@ -47,8 +48,8 @@ Foundry IQ 옵션을 변경하고 테스트해 보세요.
     - **검색 추론 작업** : 중간
     - **출력 모드** : 응답 생성
     - **지침에 답하기** : `전문가 답게 답변을 하고, 답변의 마지막에 전체 내용에 대한 요약을 한 문단으로 추가해주세요.`
-1. 
 
+<br> 
     <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/469c4ca0-28d8-4eaa-b53d-5a07f91be191" />
 
 
