@@ -16,16 +16,19 @@
 
     <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/511de723-bd71-4e66-b965-e0a0ad19075d" />
 
-   <br>
+<br>
+
     - 답변에 대한 **추적** 을 통해 에이전트의 작업 경로를 확인하세요
          
+<br>
     <img width="1690" height="1037" alt="image" src="https://github.com/user-attachments/assets/bdacfdd3-74ed-4d52-a94b-3fe3ee94a06a" />
 
 1. **게시** > **웹앱 미리보기** 를 통해서도 확인해 보세요 :
 
    <img width="480" height="385" alt="image" src="https://github.com/user-attachments/assets/e17b9eec-8f58-4525-832f-950e9fe7f7a5" />
 
-   <br>
+<br>
+
     - `캠핑 용품에는 어떤 것들이 있나요?`
 
     <img width="2000" height="1075" alt="image" src="https://github.com/user-attachments/assets/70bda2c5-0c11-4c76-9aa0-a492de4540cd" />
@@ -46,9 +49,11 @@ Foundry IQ 옵션을 변경하고 테스트해 보세요.
     - **지침에 답하기** : `전문가 답게 답변을 하고, 답변의 마지막에 전체 내용에 대한 요약을 한 문단으로 추가해주세요.`
 <br>
 
-    <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/8ebb1be8-d04b-4c4d-9233-cbefc1e854b4" />
+    <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/469c4ca0-28d8-4eaa-b53d-5a07f91be191" />
+
+
 <br>
- 
+
 1. 에이전트 메뉴에서 생성한 에이전트를 선택하세요.
 1. 다음 테스트 쿼리를 시도해 먼저 질문의 답변과 어떻게 다른지 확인해 보세요 :
     - `Contoso 는 어떤 종류의 텐트를 제공하나요?`
@@ -82,6 +87,7 @@ Azure Portal 에서 Foundry IQ 를 테스트해 보세요.
 1. 다음 정보를 찾아 메모장에 복사하세요(나중에 필요할 것입니다):
     - **에이전트 이름**: 앞에서 만든 이름입니다 (`OO-product-expert-agent`)
     - **프로젝트 엔드포인트**: 프로젝트 설정 또는 홈페이지에서 찾을 수 있습니다
+<br>
 
    <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/0653f2ae-6459-4a5e-b7ed-c2611180a2f8" />
 
