@@ -101,7 +101,7 @@
 
 ## 다음 단계
 
-* [Step 05. 에이전트에서 도구 호출에 대한 승인 설정](Step5%20-%20Connect%20to%20your%20Agent%20from%20an%20App.md)
+* [Step 05. Foundry Toolkit 에서 도구 호출에 대한 승인 설정 및 테스](Step5%20-%20Connect%20to%20your%20Agent%20from%20an%20App.md)
 
 ## 실습 순서
 
