@@ -34,7 +34,8 @@
          
 <br>
 
-    <img width="2000" height="1075" alt="image" src="https://github.com/user-attachments/assets/70bda2c5-0c11-4c76-9aa0-a492de4540cd" />
+  <img width="2000" height="1075" alt="image" src="https://github.com/user-attachments/assets/92827415-0ef2-46d3-ac98-a949fde3c346" />
+    
 <br>
 
 1. 답변을 검토하고 다음을 참고하세요 :
