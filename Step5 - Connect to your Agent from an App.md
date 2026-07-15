@@ -49,13 +49,13 @@
 
     제공된 파일에는 애플리케이션 코드, 설정 설정, 에이전트 클라이언트 스타터 코드가 포함되어 있습니다.
 
-### Configure the application settings
+### 애플리케이션 설정
 
-1. In Visual Studio Code, in the **Labfiles/04-integrate-agent-with-foundry-iq/Python** folder, open the **.env** configuration file.
-1. In the code file, replace the **your_project_endpoint** placeholder with the endpoint for your project (copied from the project **Home** page in the Foundry portal) and ensure that the AGENT_NAME variable is set to your agent name (which should be *product-expert-agent*).
-1. After you've replaced the placeholder, save the file.
+1. Visual Studio Code 에서 **Labfiles/04-integrate-agent-with-foundry-iq/Python** 폴더에서 **.env** 설정 파일을 엽니다.
+1. 코드 파일에 **your_project_endpoint** 자리 표시자를 프로젝트 엔드포인트(Foundry 포털의 프로젝트 홈페이지에서 복사한 것)로 바꾸고, AGENT_NAME 변수를 에이전트 이름('OO-product-expert-agent')으로 설정하세요.
+1. 임시 표시자를 교체한 후에는 파일을 저장하세요.
 
-### Complete the agent client code
+### 에이전트 클라이언트 코드를 작성하세요
 
 > **Tip**: As you add code, be sure to maintain the correct indentation. Use the comment indentation levels as a guide.
 
