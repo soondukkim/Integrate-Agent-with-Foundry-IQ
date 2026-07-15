@@ -1,4 +1,4 @@
-## Foundry Portal 과 Azure Portal 에서 Foundry IQ 테스트
+## 다양한 환경에서 Foundry IQ 테스트
 
 ### Foundry Portal 플레이그라운드에서 에이전트를 테스트해 보세요.
 
