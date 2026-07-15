@@ -1,6 +1,6 @@
 ## 데이터 Foundry IQ 구성
 
-이제 Foundry IQ를 사용해 지식 베이스를 검색하는 에이전트를 설정하면 됩니다.
+### Foundry IQ를 사용해 지식 베이스를 검색하는 에이전트를 설정하세요.
 
 1. 에이전트의 **지식** 섹션에서 **추가** 드롭다운을 펼친 후 **Foundry IQ 에 연결** 을 선택하세요.
 
@@ -8,6 +8,8 @@
 
 1. Foundry IQ 에 연결 창에서 **AI Search 리소스에 연결** 을 선택하세요.
 1. 지식(Foundry IQ) 창에서 **새 리소스 만들기** 를 선택하면 자원을 생성하는 대화상자가 열립니다.
+   <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/ad2eb52b-c3c9-466e-92f9-13fcb6c11a35" />
+
 1. Create a search resource with the default settings:
     - **리소스 이름**: *전 세계적으로 고유한 이름입니다 (예: OO-contosodemo-srch)*
     - **구독**: *당신의 Azure 구독*
@@ -20,7 +22,7 @@
     > \* 일부 Azure AI 자원은 지역 모델 할당량에 의해 제약을 받습니다. 작업 후반에 할당량 한도를 초과할 경우, 다른 지역에 자원을 추가해야 할 수도 있습니다.
     > 
 
-Foundry IQ와 연결할 샘플 제품 정보 문서를 업로드합니다.
+### Foundry IQ와 연결할 샘플 제품 정보 문서를 업로드합니다.
 
 1. 새 브라우저 탭을 열고 다음 채널로 이동하여 샘플 제품 정보 파일을 다운로드하세요. `https://github.com/MicrosoftLearning/mslearn-ai-agents/raw/main/Labfiles/04-integrate-agent-with-foundry-iq/data/contoso-products.zip`
 1. 압축 파일을 추출하세요. 압축 파일은 Contoso의 제품에 대해 상세히 설명한 3개의 PDF 파일이어야 합니다.
@@ -66,14 +68,15 @@ Foundry IQ와 연결할 샘플 제품 정보 문서를 업로드합니다.
    <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/8eb6f548-c20d-4fdf-9be8-842a91a0efea" />
 
 
-이제 앞에서 만든 AI Search (Foundry IQ) 로 이동 합니다.
+### 앞에서 만든 AI Search (Foundry IQ) 로 이동 합니다.
+
 1. AI Search(Foundry IQ) 의 왼쪽 창에 **보안 + 네트워킹** > **키** 에서 API 접근 제어를 위해 **모두** 를 선택하고 **기본 관리자 키** 를 클립보드에 복사하여 메모장에 붙여 넣습니다.
 
    <img width="1484" height="763" alt="image" src="https://github.com/user-attachments/assets/fae797f3-f7f4-4378-bb4b-bb6ee07b44a2" />
 
 1. Azure Portal 을 열어둔 채 **Foundry Portal** 탭으로 돌아갑니다.
 
-Foundry Portal 에서 에이전트와 연결할 지식 기반을 생성합니다.
+### Foundry Portal 에서 에이전트와 연결할 지식 기반을 생성합니다.
 
 1. **지식** 페이지에서 **지식 기반 만들기**를 선택하고 아래와 같이 구성합니다 :
     - **이름**: *고유한 이름을 입력합니다. (예: **kb-contosoproducts-OO**)*
@@ -99,6 +102,8 @@ Foundry Portal 에서 에이전트와 연결할 지식 기반을 생성합니다
    <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/f308bdfe-e334-4527-9c4d-ca042cde7217" />
 
     > 지식 소스가 활성화 되면 Azure Portal 의 **AI Search(Foundry IQ)** > **검색 관리** 에서 자동으로 생성된 **인덱서** 와 **인덱스** 를 확인할 수 있습니다.
+
+### 지식 소스 인증 방법을 설정합니다.
 
 1. 뒤로가기 버튼을 클릭하여 **지식** 페이지로 돌아간 후, **관리** 링크를 클릭하세요.
 
