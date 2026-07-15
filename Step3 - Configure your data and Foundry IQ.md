@@ -2,22 +2,9 @@
 
 이제 Foundry IQ를 사용해 지식 베이스를 검색하는 에이전트를 설정하면 됩니다.
 
-1. 먼저, 에이전트에게 다음과 같은 지침을 주세요:
+1. 에이전트의 **지식** 섹션에서 **추가** 드롭다운을 펼친 후 **Foundry IQ 에 연결** 을 선택하세요.
 
-    ```
-    당신은 아웃도어 캠핑 및 하이킹 제품 전문 기업인 콘토소(Contoso)의 친절한 AI 도우미입니다.
-    제품 또는 제품 카탈로그에 대한 질문에 답변할 때는 항상 지식 기반을 검색해야 합니다.
-    자세하고 정확한 정보를 제공하고 출처를 반드시 명시하세요.
-    에이전트에 연결된 지식 및 도구에서만 정보를 참조하고, 관련 정보를 찾지 못한 경우에는 명확하게 알려주세요.
-    ```
-
-1. 현재 에이전트 구성을 저장하려면 **저장** 을 클릭하세요.
-   
-   <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/9f2ca54b-38a8-40a2-8bb9-301d237f4e5b" />
-
-1. 그 다음 **지식** 섹션에서 **추가** 드롭다운을 펼친 후 **Foundry IQ 에 연결** 을 선택하세요.
-
-   <img width="520" height="213" alt="image" src="https://github.com/user-attachments/assets/be59d77d-4d14-4854-bacb-d8a801273ca2" />
+   <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/37be4b6d-3d46-42d5-9d45-ac6a1edb62d9" />
 
 1. Foundry IQ 에 연결 창에서 **AI Search 리소스에 연결** 을 선택하세요.
 1. 지식(Foundry IQ) 창에서 **새 리소스 만들기** 를 선택하면 자원을 생성하는 대화상자가 열립니다.
@@ -111,7 +98,7 @@ Foundry Portal 에서 에이전트와 연결할 지식 기반을 생성합니다
 
    <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/f308bdfe-e334-4527-9c4d-ca042cde7217" />
 
-> 지식 소스가 활성화 되면 Azure Portal 의 **AI Search(Foundry IQ)** > **검색 관리** 에서 자동으로 생성된 **인덱서** 와 **인덱스** 를 확인할 수 있습니다.
+    > 지식 소스가 활성화 되면 Azure Portal 의 **AI Search(Foundry IQ)** > **검색 관리** 에서 자동으로 생성된 **인덱서** 와 **인덱스** 를 확인할 수 있습니다.
 
 1. 뒤로가기 버튼을 클릭하여 **지식** 페이지로 돌아간 후, **관리** 링크를 클릭하세요.
 
