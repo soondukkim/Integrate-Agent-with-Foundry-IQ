@@ -16,23 +16,21 @@
 
     <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/511de723-bd71-4e66-b965-e0a0ad19075d" />
 
-<br>
+1. 답변에 대한 **추적** 을 통해 에이전트의 작업 경로를 확인하세요
 
-    - 답변에 대한 **추적** 을 통해 에이전트의 작업 경로를 확인하세요
-         
-<br>
     <img width="1690" height="1037" alt="image" src="https://github.com/user-attachments/assets/bdacfdd3-74ed-4d52-a94b-3fe3ee94a06a" />
 
-1. **게시** > **웹앱 미리보기** 를 통해서도 확인해 보세요 :
+웹앱 미리보기를 통해서도 확인해 보세요.
+1. **게시** > **웹앱 미리보기** 를 선택하세요.
 
    <img width="480" height="385" alt="image" src="https://github.com/user-attachments/assets/e17b9eec-8f58-4525-832f-950e9fe7f7a5" />
 
-
-<br>
+   
+   <br>
 
     - '캠핑 용품에는 어떤 것들이 있나요?'
          
-<br>
+   <br>
 
   <img width="2000" height="1075" alt="image" src="https://github.com/user-attachments/assets/92827415-0ef2-46d3-ac98-a949fde3c346" />
     
