@@ -42,10 +42,10 @@
 1. 명령 프롬프트에서 **git clone** 명령을 사용해서 로컬 폴더에 소스를 복제하세요. (어느 폴더든 상관 없습니다)
    ```
    git clone https://github.com/MicrosoftLearning/mslearn-ai-agents   
+   ```
 
-  <img width="2000" height="1043" alt="image" src="https://github.com/user-attachments/assets/f944c93b-eb99-4293-a61e-c12a27e290de" />
-
-  <br>
+    <img width="2000" height="1043" alt="image" src="https://github.com/user-attachments/assets/f944c93b-eb99-4293-a61e-c12a27e290de" />
+    <br>
 
 1. 소스가 복제되면 Visual Studio Code 에서 'C:\Download\mslearn-ai-agents\Labfiles\04-integrate-agent-with-foundry-iq' 폴더를 엽니다.
 
@@ -62,6 +62,8 @@
 ### 애플리케이션 설정
 
 1. Visual Studio Code 에서 **Labfiles/04-integrate-agent-with-foundry-iq/Python** 폴더에서 **.env** 설정 파일을 엽니다.
+   <img width="2000" height="1075" alt="image" src="https://github.com/user-attachments/assets/716c71a2-9927-4207-8a52-ebedac5690f4" />
+
 1. 코드 파일에 **your_project_endpoint** 자리 표시자를 프로젝트 엔드포인트(Foundry 포털의 프로젝트 홈페이지에서 복사한 것)로 바꾸고, AGENT_NAME 변수를 에이전트 이름('OO-product-expert-agent')으로 설정하세요.
 1. 임시 표시자를 교체한 후에는 파일을 저장하세요.
 
