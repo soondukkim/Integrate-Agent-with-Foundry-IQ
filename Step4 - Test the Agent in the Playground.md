@@ -28,8 +28,10 @@
    <img width="480" height="385" alt="image" src="https://github.com/user-attachments/assets/e17b9eec-8f58-4525-832f-950e9fe7f7a5" />
 
 
-    - `캠핑 용품에는 어떤 것들이 있나요?`
+<br>
 
+    - '캠핑 용품에는 어떤 것들이 있나요?'
+         
 <br>
 
     <img width="2000" height="1075" alt="image" src="https://github.com/user-attachments/assets/70bda2c5-0c11-4c76-9aa0-a492de4540cd" />
