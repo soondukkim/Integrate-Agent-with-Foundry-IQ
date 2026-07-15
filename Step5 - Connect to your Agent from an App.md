@@ -20,7 +20,16 @@
 1. **도구 사용 전에 승인 필요** 드롭다운에서 **Ask for approval for all tools** 을 선택하고 **저장**하세요.
    <img width="437" height="330" alt="image" src="https://github.com/user-attachments/assets/a8ca070d-9287-42b7-a063-a6f9c32ba97b" />
 
-이제 에이전트는 Foundry IQ를 사용해 지식 베이스를 검색할 때마다 승인을 요청하게 되며, 다음에 완료한 클라이언트 앱이 이를 처리합니다.
+    > **참고**: 이제 에이전트는 Foundry IQ를 사용해 지식 베이스를 검색할 때마다 승인을 요청하게 되며, 다음에 완료한 클라이언트 앱이 이를 처리합니다.
+
+1. **Playground** 창에서 다음 쿼리를 확인해 보세요. (에이전트가 답변하기 전에 승인을 요청하는지 확인하세요) :
+    - `텐트의 방수 기능에 대해 설명해 주세요.`
+    - `데이팩과 익스페디션 백팩의 차이점은 무엇인가요?`
+      <img width="2000" height="1075" alt="image" src="https://github.com/user-attachments/assets/04824715-c773-429d-9b7b-b99bc42a2e25" />
+
+1. 빠른 테스트를 위해 다시 도구 승인 옵션을 수정합니다.  **Tools** 섹션에서 앞에서 생성한 지식의 **Configure** 를 클릭하세요.
+1. **도구 사용 전에 승인 필요** 드롭다운에서 **Always approve all tools** 을 선택하고 **저장**하세요.
+
 
 ## 앱에서 에이전트와 연결하세요
 
