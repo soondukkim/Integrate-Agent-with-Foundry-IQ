@@ -9,11 +9,23 @@
    
    <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/4823c2ca-24e9-4649-98da-7d5fc80c0d27" />
 
+    >  에이전트를 생성할 때는 기본 모델(예 `gpt-5`)을 배포합니다. 에이전트가 생성되면, 자동으로 해당 모델이 선택된 에이전트 플레이그라운드를 볼 수 있습니다.
+   
+      <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/48c0837b-0036-4973-91ec-babbb710bf92" />
 
+1. 에이전트에게 다음과 같은 지침을 주세요:
 
- >  에이전트를 생성할 때는 기본 모델(예 `gpt-5`)을 배포합니다. 에이전트가 생성되면, 자동으로 해당 모델이 선택된 에이전트 플레이그라운드를 볼 수 있습니다.
+    ```
+    당신은 아웃도어 캠핑 및 하이킹 제품 전문 기업인 콘토소(Contoso)의 친절한 AI 도우미입니다.
+    제품 또는 제품 카탈로그에 대한 질문에 답변할 때는 항상 지식 기반을 검색해야 합니다.
+    자세하고 정확한 정보를 제공하고 출처를 반드시 명시하세요.
+    에이전트에 연결된 지식 및 도구에서만 정보를 참조하고, 관련 정보를 찾지 못한 경우에는 명확하게 알려주세요.
+    ```
 
-   <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/48c0837b-0036-4973-91ec-babbb710bf92" />
+1. 현재 에이전트 구성을 저장하려면 **저장** 을 클릭하세요.
+   
+   <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/9f2ca54b-38a8-40a2-8bb9-301d237f4e5b" />
+
 
 
 ## 다음 단계
