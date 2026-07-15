@@ -33,9 +33,9 @@
    ```
    git clone https://github.com/MicrosoftLearning/mslearn-ai-agents   
 
-<img width="2000" height="1043" alt="image" src="https://github.com/user-attachments/assets/f944c93b-eb99-4293-a61e-c12a27e290de" />
+  <img width="2000" height="1043" alt="image" src="https://github.com/user-attachments/assets/f944c93b-eb99-4293-a61e-c12a27e290de" />
 
-<br>
+  <br>
 
 1. 소스가 복제되면 Visual Studio Code 에서 'C:\Download\mslearn-ai-agents\Labfiles\04-integrate-agent-with-foundry-iq' 폴더를 엽니다.
 
@@ -68,119 +68,119 @@
 
 1. 첫 번째 **TODO** 주석을 찾아서 다음 코드를 추가해 프로젝트에 연결하고, OpenAI 클라이언트를 받고, 에이전트를 불러와, 새로운 대화를 만듭니다 :
 
- <br>
+   <br>
+ 
+     <img width="2000" height="1075" alt="image" src="https://github.com/user-attachments/assets/033c1011-5991-40f4-9372-9da384e1e695" />
 
-   <img width="2000" height="1075" alt="image" src="https://github.com/user-attachments/assets/033c1011-5991-40f4-9372-9da384e1e695" />
+   <br>
 
- <br>
+   > **팁**: 들여쓰기 수준을 올바르게 유지하도록 주의하세요.
 
- > **팁**: 들여쓰기 수준을 올바르게 유지하도록 주의하세요.
+   <br>
 
- <br>
-
-    ```python
-    # Connect to the project and agent
-    credential = DefaultAzureCredential(
-        exclude_environment_credential=True,
-        exclude_managed_identity_credential=True
-    )
-    project_client = AIProjectClient(
-        credential=credential,
-        endpoint=project_endpoint
-    )
-
-    # Get the OpenAI client
-    openai_client = project_client.get_openai_client()
-
-    # Get the agent
-    agent = project_client.agents.get(agent_name=agent_name)
-    print(f"Connected to agent: {agent.name} (id: {agent.id})\n")
-
-    # Create a new conversation
-    conversation = openai_client.conversations.create(items=[])
-    print(f"Created conversation (id: {conversation.id})\n")
-    ```
+        ```python
+        # Connect to the project and agent
+        credential = DefaultAzureCredential(
+            exclude_environment_credential=True,
+            exclude_managed_identity_credential=True
+        )
+        project_client = AIProjectClient(
+            credential=credential,
+            endpoint=project_endpoint
+        )
+    
+        # Get the OpenAI client
+        openai_client = project_client.get_openai_client()
+    
+        # Get the agent
+        agent = project_client.agents.get(agent_name=agent_name)
+        print(f"Connected to agent: {agent.name} (id: {agent.id})\n")
+    
+        # Create a new conversation
+        conversation = openai_client.conversations.create(items=[])
+        print(f"Created conversation (id: {conversation.id})\n")
+        ```
 
 1. `send_message_to_agent()` 함수 내 두 번째 **TODO** 주석을 찾아 메시지를 보내고 응답을 처리하는 코드를 추가하세요. MCP 승인 요청을 포함합니다 :
  
-    ```python
-    # Add user message to the conversation
-    openai_client.conversations.items.create(
-        conversation_id=conversation.id,
-        items=[{"type": "message", "role": "user", "content": user_message}],
-    )
-    
-    # Store in conversation history (client-side)
-    conversation_history.append({
-        "role": "user",
-        "content": user_message
-    })
-    
-    # Create a response using the agent
-    response = openai_client.responses.create(
-        conversation=conversation.id,
-        extra_body={"agent_reference": {"name": agent.name, "type": "agent_reference"}},
-        input=""
-    )
-
-    # Check if the response output contains an MCP approval request
-    approval_request = None
-    if hasattr(response, 'output') and response.output:
-        for item in response.output:
-            if hasattr(item, 'type') and item.type == 'mcp_approval_request':
-                approval_request = item
-                break
-    
-    # Handle approval request if present
-    if approval_request:
-        print(f"[Approval required for: {approval_request.name}]\n")
-        print(f"Server: {approval_request.server_label}")
-        
-        # Parse and display the arguments (optional, for transparency)
-        import json
-        try:
-            args = json.loads(approval_request.arguments)
-            print(f"Arguments: {json.dumps(args, indent=2)}\n")
-        except:
-            print(f"Arguments: {approval_request.arguments}\n")
-        
-        # Prompt user for approval
-        approval_input = input("Approve this action? (yes/no): ").strip().lower()
-        
-        if approval_input in ['yes', 'y']:
-            print("Approving action...\n")
-            
-            # Create approval response item
-            approval_response = {
-                "type": "mcp_approval_response",
-                "approval_request_id": approval_request.id,
-                "approve": True
-            }
-        else:
-            print("Action denied.\n")
-            
-            # Create denial response item
-            approval_response = {
-                "type": "mcp_approval_response",
-                "approval_request_id": approval_request.id,
-                "approve": False
-            }
-        
-        # Add the approval response to the conversation
+        ```python
+        # Add user message to the conversation
         openai_client.conversations.items.create(
             conversation_id=conversation.id,
-            items=[approval_response]
+            items=[{"type": "message", "role": "user", "content": user_message}],
         )
         
-        # Get the actual response after approval/denial
+        # Store in conversation history (client-side)
+        conversation_history.append({
+            "role": "user",
+            "content": user_message
+        })
+        
+        # Create a response using the agent
         response = openai_client.responses.create(
             conversation=conversation.id,
             extra_body={"agent_reference": {"name": agent.name, "type": "agent_reference"}},
             input=""
         )
     
-    ```
-
+        # Check if the response output contains an MCP approval request
+        approval_request = None
+        if hasattr(response, 'output') and response.output:
+            for item in response.output:
+                if hasattr(item, 'type') and item.type == 'mcp_approval_request':
+                    approval_request = item
+                    break
+        
+        # Handle approval request if present
+        if approval_request:
+            print(f"[Approval required for: {approval_request.name}]\n")
+            print(f"Server: {approval_request.server_label}")
+            
+            # Parse and display the arguments (optional, for transparency)
+            import json
+            try:
+                args = json.loads(approval_request.arguments)
+                print(f"Arguments: {json.dumps(args, indent=2)}\n")
+            except:
+                print(f"Arguments: {approval_request.arguments}\n")
+            
+            # Prompt user for approval
+            approval_input = input("Approve this action? (yes/no): ").strip().lower()
+            
+            if approval_input in ['yes', 'y']:
+                print("Approving action...\n")
+                
+                # Create approval response item
+                approval_response = {
+                    "type": "mcp_approval_response",
+                    "approval_request_id": approval_request.id,
+                    "approve": True
+                }
+            else:
+                print("Action denied.\n")
+                
+                # Create denial response item
+                approval_response = {
+                    "type": "mcp_approval_response",
+                    "approval_request_id": approval_request.id,
+                    "approve": False
+                }
+            
+            # Add the approval response to the conversation
+            openai_client.conversations.items.create(
+                conversation_id=conversation.id,
+                items=[approval_response]
+            )
+            
+            # Get the actual response after approval/denial
+            response = openai_client.responses.create(
+                conversation=conversation.id,
+                extra_body={"agent_reference": {"name": agent.name, "type": "agent_reference"}},
+                input=""
+            )
+        
+        ```
+    
 1. 코드를 추가한 후에는 파일을 저장하세요.
 
 1. 코드를 검토하세요. 이제 대화 API를 사용해 에이전트와의 상호작용을 관리하세요. 다음과 같은 상황에서 :
