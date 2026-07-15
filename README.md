@@ -49,4 +49,4 @@ Foundry IQ 는 엔터프라이즈 환경의 지식과 데이터를 AI Agent 에 
 * [Step 04. Foundry 에이전트, AI Search 지식 기반 에서 테스트](Step4%20-%20Test%20the%20Agent%20in%20the%20Playground.md)
 * [Step 05. 에이전트에서 도구 호출에 대한 승인 설정](Step5%20-%20Connect%20to%20your%20Agent%20from%20an%20App.md)
 * [Step 06. 앱에서 에이전트 통합 테스트](Step6%20-%20Test%20the%20Integration.md)
-* [Step 07. 요약 및 정리(Cleanup)](Step7%20-%20Summary%20%26%20Clean%20up.md)
+* [Step 07. 요약 및 리소스 정리(Cleanup)](Step7%20-%20Summary%20%26%20Clean%20up.md)
