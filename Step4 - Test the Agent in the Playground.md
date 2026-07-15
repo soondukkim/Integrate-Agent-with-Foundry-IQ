@@ -12,6 +12,7 @@
     - `Contoso 는 어떤 종류의 텐트를 제공하나요?`
     - `XL 사이즈로 구매 가능한 백팩에 대해 알려주세요.`
     - `데이팩과 익스페디션 백팩의 차이점은 무엇인가요?`
+   <br>
 
     <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/511de723-bd71-4e66-b965-e0a0ad19075d" />
 
@@ -26,6 +27,7 @@
     - `캠핑 용품에는 어떤 것들이 있나요?`
 
     <img width="2000" height="1075" alt="image" src="https://github.com/user-attachments/assets/70bda2c5-0c11-4c76-9aa0-a492de4540cd" />
+<br>
 
 1. 답변을 검토하고 다음을 참고하세요 :
     - 에이전트는 지식 기반에서 구체적인 정보를 제공합니다
@@ -40,8 +42,10 @@ Foundry IQ 옵션을 변경하고 테스트해 보세요.
     - **검색 추론 작업** : 중간
     - **출력 모드** : 응답 생성
     - **지침에 답하기** : `전문가 답게 답변을 하고, 답변의 마지막에 전체 내용에 대한 요약을 한 문단으로 추가해주세요.`
-    - The main program loop
-      
+
+    <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/8ebb1be8-d04b-4c4d-9233-cbefc1e854b4" />
+<br>
+ 
 1. 에이전트 메뉴에서 생성한 에이전트를 선택하세요.
 1. 다음 테스트 쿼리를 시도해 먼저 질문의 답변과 어떻게 다른지 확인해 보세요 :
     - `Contoso 는 어떤 종류의 텐트를 제공하나요?`
@@ -62,6 +66,9 @@ Azure Portal 에서 Foundry IQ 를 테스트해 보세요.
     - `백패킹 텐트와 돔 텐트의 특징을 비교해 주세요.`
     - `방수 기능이 되는 텐트의 종류별 특징과 가격을 알려주세요.`
     - `데이팩과 익스페디션 백팩의 차이점은 무엇인가요?`
+
+    <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/f9c06039-6563-4b29-8c20-41af78415479" />
+<br>
 
 1. 답변을 검토하고 다음을 참고하세요 :
     - Foundry IQ 옵션 변경에 따라 답변이 달라집니다.
