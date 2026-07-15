@@ -234,10 +234,10 @@
 1. 테스트가 끝나면 `quit` 명령으로 해당 앱을 종료하세요.
 
 ### 현재 코드는 상담원과의 상호 작용을 관리하기 위해 대화 API를 사용합니다. :
-    - 대화는 ID에 의해 생성되고 추적됩니다.
-    - 사용자 메시지는 `conversations.items.create()` 를 사용해서 대화에 추가됩니다.
-    - 응답은 agent_reference 와 함께 `responses.create()` 를 사용하여 생성됩니다.
-    - 에이전트는 Foundry IQ에서 정보를 검색합니다.
+1. 대화는 ID에 의해 생성되고 추적됩니다.
+1. 사용자 메시지는 `conversations.items.create()` 를 사용해서 대화에 추가됩니다.
+1. 응답은 agent_reference 와 함께 `responses.create()` 를 사용하여 생성됩니다.
+1. 에이전트는 Foundry IQ에서 정보를 검색합니다.
 
 
 ## 결과 검토
