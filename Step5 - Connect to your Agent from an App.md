@@ -1,35 +1,39 @@
-### Configure the agent to require approval for tool calls
+### 에이전트를 도구 호출에 대한 승인을 요구하도록 설정하세
 
-When you create an agent in the portal, its Foundry IQ (knowledge) tool runs **without** asking for approval by default. To ensure your app can review and control each knowledge base lookup, you'll change the agent to require approval before it uses tools with the Foundry Toolkit for VS Code extension.
+포털에서 에이전트를 만들면, 기본적으로 Foundry IQ(지식) 도구가 승인 없이 실행됩니다. 앱이 각 지식 기반 조회를 검토하고 제어할 수 있도록 하면, Foundry Toolkit for VS Code 확장 기능을 사용하기 전에 승인을 요구하도록 에이전트를 변경해야 합니다.
 
-> **Note**: The Foundry portal doesn't currently expose a setting to change this approval behavior, so you'll configure it from the Foundry Toolkit extension instead.
+> **참고**: 현재 Foundry 포털에서는 이 승인 동작을 변경하는 설정을 제공하지 않으므로, 대신 Foundry Toolkit 확장 기능에서 설정해야 합니다.
 
-1. In Visual Studio Code, select **Extensions** from the left pane (or press **Ctrl+Shift+X**), then search the marketplace for the `Foundry Toolkit for VS Code` extension from Microsoft and select **Install** (if it isn't already installed).
+1. Visual Studio Code 에서 왼쪽 창에 **Extensions** 을 선택하거나 **Ctrl+Shift+X** 버튼을 누르고, 마켓플레이스에서 Microsoft 확장 프로그램을 `Foundry Toolkit for VS Code` 검색한 후 **설치** (아직 설치되지 않은 경우)를 합니다.
 
-    > **Note**: The extension is currently listed as **Foundry Toolkit**, but some VS Code labels, commands, or older screenshots may still refer to **AI Toolkit**. In this lab, treat those names as referring to the same extension experience.
+    > **참고**: 확장 프로그램은 현재 **Foundry Toolkit** 으로 표기되어 있으나, 일부 VS Code 라벨, 명령어 또는 이전 스크린샷은 여전히 **AI Toolkit** 을 참조할 수 있습니다. 이 LAB 에서는 그 이름들을 동일한 확장 경험을 가리키는 것으로 간주하세요.
 
-1. Select the **Foundry Toolkit** icon in the sidebar, and sign in to your Azure account if you're prompted.
+1. 사이드바에서 **Foundry Toolkit** 아이콘을 선택하고, 요청이 뜨면 Azure 계정에 로그인하세요.
    
-    > **Note**: If you're unable to sign in with the Foundry Toolkit extension, you my need to select the Azure extension. Sign in there, then navigate back to the Foundry Toolkit to access your resources.
+    > **참고**: Foundry Toolkit 확장 프로그램으로 로그인할 수 없다면, Azure 확장 프로그램을 선택해야 합니다. 거기서 로그인한 후 다시 파운드리 툴킷으로 돌아가 자원에 접근하세요.
 
-1. Under **Microsoft Foundry Resources**, choose **Set Default Project** and select the project you created earlier.
-1. Expand the project section. Under **Prompt Agents**, select your `product-expert-agent` agent to open the **Agent Builder** window.
-1. In the **Tools** section, add the **Azure AI Search** tool, and then select the connection and knowledge base you created earlier.
+1. **Microsoft Foundry Resources** 에서 **Set Default Project** 을 선택하고 이전에 만든 프로젝트를 선택하세요.
+1. 프로젝트 섹션을 확장하세요. **Prompt Agents** 에서 에이전트 `OO-product-expert-agent` 를 선택해 **Agent Builder** 창을 엽니다.
+1. **Tools** 섹션에서 **Azure AI Search** 도구를 추가한 후, 이전에 만든 연결과 지식 베이스를 선택하세요.
 
-    > **Note**: The agent may list more than one tool. The Foundry portal adds a **Web search** tool to new agents by default, so be sure to select the three dots on the **Azure AI Search** tool for your knowledge base rather than another tool.
-1. In the **Require approval before using tools** dropdown, select **Ask for approval for all tools**, and save your changes if you're prompted.
+    > **참고**: 에이전트가 여러 도구를 나열할 수 있습니다. Foundry 포털은 기본적으로 새로운 에이전트에게 **Web Search** 도구를 추가하므로, 다른 도구 대신 **Azure AI Search** 도구의 메뉴(세 점)를 지식 베이스에 선택하세요.
+1. **도구 사용 전에 승인 필요** 드롭다운에서 **모든 도구에 대한 승인 요청** 을 선택하고 요청이 뜨면 변경 사항을 저장하세요.
 
-Your agent will now request approval each time it uses Foundry IQ to search the knowledge base, which the client app you complete next will handle.
+이제 에이전트는 Foundry IQ를 사용해 지식 베이스를 검색할 때마다 승인을 요청하게 되며, 다음에 완료한 클라이언트 앱이 이를 처리합니다.
 
-## Connect to your agent from an app
+## 앱에서 에이전트와 연결하세요
 
-Now you'll create a Python application to interact with your agent programmatically. Starter files have been provided in the GitHub repository to help you get started quickly.
+이제 에이전트와 프로그래밍적으로 상호작용할 수 있는 Python 애플리케이션을 만들 것입니다. 빠르게 시작할 수 있도록 GitHub 저장소에 스타터 파일이 제공됩니다.
 
-### Prepare to develop an app in Visual Studio Code
+### Visual Studio Code 로 앱 개발을 준비하세요
 
-Now let's use Visual Studio Code to develop an app. The code files for your app have been provided in a GitHub repo.
+이제 Visual Studio Code를 사용해 앱을 개발해 봅시다. 귀하의 앱 코드 파일은 GitHub 저장소에 제공되었습니다.
 
-1. Start Visual Studio Code, and open the command palette (Shift+Ctrl+P). Then search for and run the **Git: Clone** command to clone the `https://github.com/MicrosoftLearning/mslearn-ai-agents` repo to a local folder (it doesn't matter which folder).
+1. 명령 프롬프트에서 **git clone** 명령을 사용해서 로컬 폴더에 소스를 복제하세요 (어느 폴더든 상관 없습니다.) `https://github.com/MicrosoftLearning/mslearn-ai-agents`
+   ```
+   git clone https://github.com/MicrosoftLearning/mslearn-ai-agents
+   
+   
 1. When the repository has been cloned, open the folder in Visual Studio Code.
 
     > **Note**: If Visual Studio Code shows you a pop-up message prompting you to trust the code you are opening, click **Yes, I trust the authors** option to continue.
