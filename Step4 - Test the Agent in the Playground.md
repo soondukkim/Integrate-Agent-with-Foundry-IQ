@@ -16,6 +16,7 @@
 
     <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/511de723-bd71-4e66-b965-e0a0ad19075d" />
 
+   <br>
     - 답변에 대한 **추적** 을 통해 에이전트의 작업 경로를 확인하세요
          
     <img width="1690" height="1037" alt="image" src="https://github.com/user-attachments/assets/bdacfdd3-74ed-4d52-a94b-3fe3ee94a06a" />
@@ -24,6 +25,7 @@
 
    <img width="480" height="385" alt="image" src="https://github.com/user-attachments/assets/e17b9eec-8f58-4525-832f-950e9fe7f7a5" />
 
+   <br>
     - `캠핑 용품에는 어떤 것들이 있나요?`
 
     <img width="2000" height="1075" alt="image" src="https://github.com/user-attachments/assets/70bda2c5-0c11-4c76-9aa0-a492de4540cd" />
@@ -42,6 +44,7 @@ Foundry IQ 옵션을 변경하고 테스트해 보세요.
     - **검색 추론 작업** : 중간
     - **출력 모드** : 응답 생성
     - **지침에 답하기** : `전문가 답게 답변을 하고, 답변의 마지막에 전체 내용에 대한 요약을 한 문단으로 추가해주세요.`
+<br>
 
     <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/8ebb1be8-d04b-4c4d-9233-cbefc1e854b4" />
 <br>
@@ -58,6 +61,7 @@ Azure Portal 에서 Foundry IQ 를 테스트해 보세요.
 1. Azure Portal 'portal.azure.com' 탭으로 이동하세요.
 1. 상단의 검색 창에서 **AI Search(Foundry IQ)** 를 검색하고, 만들어 놓은 **Search Service(Foundry IQ)** 를 선택하세요.
 
+<br>
    <img width="1532" height="469" alt="image" src="https://github.com/user-attachments/assets/b676c600-6adf-4da2-867d-2912f34154df" />
 
 1. **에이전트 검색** > **지식 기반** 에서 만들어 놓은 지식 기반 'kb-contosoproducts-OO' 을 선택하세요.
@@ -67,6 +71,7 @@ Azure Portal 에서 Foundry IQ 를 테스트해 보세요.
     - `방수 기능이 되는 텐트의 종류별 특징과 가격을 알려주세요.`
     - `데이팩과 익스페디션 백팩의 차이점은 무엇인가요?`
 
+<br>
     <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/f9c06039-6563-4b29-8c20-41af78415479" />
 <br>
 
