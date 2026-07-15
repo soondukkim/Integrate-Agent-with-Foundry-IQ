@@ -1,4 +1,4 @@
-## Microsoft 파운드리 프로젝트 생성
+## Microsoft Foundry 프로젝트 생성
 
 새로운 Foundry 경험을 활용한 Foundry 프로젝트를 만드는 것부터 시작해 보겠습니다.
 
