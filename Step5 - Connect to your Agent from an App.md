@@ -68,10 +68,12 @@
 
 1. 첫 번째 **TODO** 주석을 찾아서 다음 코드를 추가해 프로젝트에 연결하고, OpenAI 클라이언트를 받고, 에이전트를 불러와, 새로운 대화를 만듭니다 :
 
-   <img width="2000" height="1075" alt="image" src="https://github.com/user-attachments/assets/3f3c85eb-925d-4bbb-b5a6-77c0820fd83b" />
-
-
     > **팁**: 들여쓰기 수준을 올바르게 유지하도록 주의하세요.
+<br>
+
+   <img width="2000" height="1075" alt="image" src="https://github.com/user-attachments/assets/033c1011-5991-40f4-9372-9da384e1e695" />
+
+<br>
 
     ```python
     # Connect to the project and agent
