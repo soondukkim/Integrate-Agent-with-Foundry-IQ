@@ -91,10 +91,10 @@
 - Foundry IQ 옵션 변경에 따라 답변이 달라집니다.
 - Azure Portal 의 지식 기반에서 더 구체적인 참조자료를 확인 및 디버그를 할 수 있습니다.
 
-<br>
 다음 정보를 찾아 메모장에 복사하세요. (다음 실습에서 앱에서 에이전트를 연결할 때 필요합니다)
-- **에이전트 이름**: 앞에서 만든 이름입니다 (`OO-product-expert-agent`)
-- **프로젝트 엔드포인트**: 프로젝트 설정 또는 홈페이지에서 찾을 수 있습니다.
+- **에이전트 이름** : 앞에서 만든 이름입니다 (`OO-product-expert-agent`)
+- **프로젝트 엔드포인트** : 프로젝트 설정 또는 홈페이지에서 찾을 수 있습니다.
+
    <br>
       <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/0653f2ae-6459-4a5e-b7ed-c2611180a2f8" />
 
