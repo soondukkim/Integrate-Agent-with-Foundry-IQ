@@ -38,7 +38,7 @@ Foundry IQ 는 엔터프라이즈 환경의 지식과 데이터를 AI Agent 에 
 
 ## 다음 단계
 
-* [Step 01. Microsoft Foundry 프로젝트와 에이전트 생성](step01.md)
+* [Step 01. Microsoft Foundry 프로젝트 생](Step1%20-%20Create%20a%20Foundry%20Project.md)
 
 ## 실습 순서
 
