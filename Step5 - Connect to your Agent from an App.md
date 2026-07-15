@@ -8,6 +8,8 @@
 
     > **참고**: 확장 프로그램은 현재 **Foundry Toolkit** 으로 표기되어 있으나, 일부 VS Code 라벨, 명령어 또는 이전 스크린샷은 여전히 **AI Toolkit** 을 참조할 수 있습니다. 이 LAB 에서는 그 이름들을 동일한 확장 경험을 가리키는 것으로 간주하세요.
 
+    <img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/80da0668-337f-44ce-9af2-8abed861e519" />
+
 1. 사이드바에서 **Foundry Toolkit** 아이콘을 선택하고, 요청이 뜨면 Azure 계정에 로그인하세요.
    
     > **참고**: Foundry Toolkit 확장 프로그램으로 로그인할 수 없다면, Azure 확장 프로그램을 선택해야 합니다. 거기서 로그인한 후 다시 파운드리 툴킷으로 돌아가 자원에 접근하세요.
