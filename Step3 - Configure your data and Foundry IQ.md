@@ -128,3 +128,20 @@ Foundry Portal 에서 에이전트와 연결할 지식 기반을 생성합니다
 1. 인증 편집 화면을 **저장** 합니다.
 
 이제 Foundry IQ 설정이 완료되었습니다.
+
+
+
+## 다음 단계
+
+* [Step 04. Foundry 에이전트, AI Search 지식 기반 에서 테스트](Step4%20-%20Test%20the%20Agent%20in%20the%20Playground.md)
+
+## 실습 순서
+
+* [개요. Integrate Agent with Foundry IQ](README.md)
+* [Step 01. Microsoft Foundry 프로젝트 생성](Step1%20-%20Create%20a%20Foundry%20Project.md)
+* [Step 02. 에이전트 생성](Step2%20-%20Create%20an%20Agent.md)
+* [Step 03. 데이터 Foundry IQ 구성](Step3%20-%20Configure%20your%20data%20and%20Foundry%20IQ.md)
+* [Step 04. Foundry 에이전트, AI Search 지식 기반 에서 테스트](Step4%20-%20Test%20the%20Agent%20in%20the%20Playground.md)
+* [Step 05. 에이전트에서 도구 호출에 대한 승인 설정](Step5%20-%20Connect%20to%20your%20Agent%20from%20an%20App.md)
+* [Step 06. 앱에서 에이전트 통합 테스트](Step6%20-%20Test%20the%20Integration.md)
+* [Step 07. 요약 및 리소스 정리(Cleanup)](Step7%20-%20Summary%20%26%20Clean%20up.md)
