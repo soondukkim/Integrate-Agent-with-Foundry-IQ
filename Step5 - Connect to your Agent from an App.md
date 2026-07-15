@@ -57,16 +57,16 @@
 
 ### 에이전트 클라이언트 코드를 작성하세요
 
-> **Tip**: As you add code, be sure to maintain the correct indentation. Use the comment indentation levels as a guide.
+> **팁**: 코드를 추가할 때는 올바른 들여쓰기를 유지하세요. 코멘트 들여쓰기 수준을 참고하세요.
 
-1. In Visual Studio Code, in the **Labfiles/04-integrate-agent-with-foundry-iq/Python** folder, open the **agent_client.py** code file.
-1. Review the starter code that has been provided, including:
+1. Visual Studio Code 에서 **Labfiles/04-integrate-agent-with-foundry-iq/Python** 폴더에서 **agent_client.py** 코드 파일을 엽니다.
+1. 제공된 스타터 코드를 검토하세요. 여기에는 다음이 포함됩니다 :
     - Import statements and configuration loading
     - The `send_message_to_agent()` function structure
     - The `display_conversation_history()` function
     - The main program loop
 
-1. Find the first **TODO** comment and add the following code to connect to the project, get the OpenAI client, retrieve the agent, and create a new conversation:
+1. 첫 번째 **TODO** 주석을 찾아서 다음 코드를 추가해 프로젝트에 연결하고, OpenAI 클라이언트를 받고, 에이전트를 불러와, 새로운 대화를 만듭니다 :
 
     > **Tip**: Be careful to maintain the correct indentation level.
 
@@ -93,8 +93,8 @@
     print(f"Created conversation (id: {conversation.id})\n")
     ```
 
-1. Find the second **TODO** comment inside the `send_message_to_agent()` function and add the following code to send messages and handle responses, including MCP approval requests:
-
+1. `send_message_to_agent()` 함수 내 두 번째 **TODO** 주석을 찾아 메시지를 보내고 응답을 처리하는 코드를 추가하세요. MCP 승인 요청을 포함합니다 :
+ 
     ```python
     # Add user message to the conversation
     openai_client.conversations.items.create(
@@ -173,121 +173,14 @@
     
     ```
 
-1. After you've added the code, save the file.
+1. 코드를 추가한 후에는 파일을 저장하세요.
 
-1. Review the code now uses the conversations API to manage interactions with your agent, where:
-    - A conversation is created and tracked by its ID
-    - User messages are added to the conversation using `conversations.items.create()`
-    - Responses are generated using `responses.create()` with an agent reference
-    - **MCP approval handling**: When the agent needs to access Foundry IQ, it requests approval by returning an `mcp_approval_request` in the response output
-    - The code prompts you to approve or deny the action before proceeding
-    - After approval/denial, an `mcp_approval_response` is added to the conversation and a new response is generated
-    - The agent retrieves information from Foundry IQ based on your approval decision
+1. 코드를 검토하세요. 이제 대화 API를 사용해 에이전트와의 상호작용을 관리하세요. 다음과 같은 상황에서 :
+    - 대화는 ID에 의해 생성되고 추적됩니다.
+    - 사용자 메시지는 `conversations.items.create()` 를 사용해서 대화에 추가됩니다.
+    - 응답은 agent_reference 가 포함된 `responses.create()` 를 사용하여 생성됩니다.
+    - **MCP 승인 처리**: 에이전트가 Foundry IQ 에 접근해야 하는 경우, 응답 출력에 `mcp_approval_request` 를 반환하여 승인을 요청합니다.
+    - 코드는 진행하기 전에 행동을 승인하거나 거부하도록 안내합니다.
+    - 승인/거부 후 `mcp_approval_response` 가 추가되고 새로운 답변이 생성됩니다.
+    - 에이전트는 승인 결정을 바탕으로 Foundry IQ에서 정보를 조회합니다.
 
-## Test the Integration
-
-Now you'll run your application and test the agent's ability to retrieve information from the knowledge base.
-
-1. In Visual Studio Code, open an integrated terminal for the **Labfiles/04-integrate-agent-with-foundry-iq/Python** folder by right-clicking the folder and selecting **Open in Integrated Terminal**.
-1. First, create a virtual environment and install dependencies.
-
-    ```
-   python -m venv labenv
-   ./labenv/Scripts/activate
-   pip install -r requirements.txt
-    ```
-
-1. In the terminal pane, enter the following command to sign into Azure.
-
-    ```
-    az login
-    ```
-
-    > **Note**: In most scenarios, just using *az login* will be sufficient. However, if you have subscriptions in multiple tenants, you may need to specify the tenant by using the *--tenant* parameter. See [Sign into Azure interactively using the Azure CLI](https://learn.microsoft.com/cli/azure/authenticate-azure-cli-interactively) for details.
-
-1. When prompted, follow the instructions to open the sign-in page in a new tab and enter the authentication code provided and your Azure credentials. Then complete the sign in process in the command line, selecting the subscription containing your Foundry resource if prompted.
-
-1. In the terminal pane, run your application:
-
-    ```
-   python agent_client.py
-    ```
-
-1. When the application starts, test the agent with the following queries:
-
-    **Query 1 - Product Categories:**
-
-    ```
-    What types of outdoor products does Contoso offer?
-    ```
-
-    When prompted for approval, type **yes** to allow the agent to search the knowledge base. Observe how the agent retrieves information from multiple documents in the knowledge base.
-
-    **Query 2 - Specific Product Details:**
-
-    ```
-    Tell me about the weatherproof features of your tents.
-    ```
-
-    Approve the request and notice how the agent provides specific details from the tents catalog.
-
-    **Query 3 - Product Comparisons:**
-
-    ```
-    What's the difference between your daypacks and expedition backpacks?
-    ```
-
-    Approve the request and see how the agent can synthesize information from the backpacks guide.
-
-    **Query 4 - Accessories and Add-ons:**
-
-    ```
-    What camping accessories would you recommend for a weekend hiking trip?
-    ```
-
-    Approve the request and observe the agent's ability to provide recommendations based on the knowledge base.
-
-    **Query 5 - Follow-up Question:**
-
-    ```
-    How much do those items typically cost?
-    ```
-
-    Notice how the agent maintains conversation context from your previous query.
-
-1. Type `history` to view the complete conversation history.
-
-1. Type `quit` when you're done testing.
-
-### Review the results
-
-Consider the following aspects of the agent's responses:
-
-- **MCP Approval Flow**: Each time the agent needs to access the knowledge base, it requests approval, giving you control over external tool usage
-- **Accuracy**: The agent provides information directly from the knowledge base documents
-- **Citations**: The agent may include source references or document IDs
-- **Context awareness**: The agent remembers previous messages in the conversation
-- **Grounding**: The agent indicates when it cannot find relevant information in the knowledge base
-- **Error handling**: The application gracefully handles errors and connection issues
-
-## Summary
-
-In this exercise, you:
-
-- Created a Foundry project and agent with the new Foundry UI
-- Built a knowledge base with product information documents
-- Configured an agent in the portal with Foundry IQ enabled
-- Connected to your agent from Visual Studio Code using the Python SDK
-- Implemented a client application with MCP approval handling, conversation history, and error handling
-- Tested the agent's ability to retrieve and synthesize information from the knowledge base with user-controlled approval for external tool access
-
-This demonstrates how to integrate AI agents with Foundry IQ to create intelligent applications that can search and retrieve information from enterprise knowledge bases while maintaining conversational context.
-
-## Clean up
-
-If you've finished exploring Azure AI Agent Service and Foundry IQ, you should delete the resources you have created in this exercise to avoid incurring unnecessary Azure costs.
-
-1. In a web browser, open the [Azure portal](https://portal.azure.com) at `https://portal.azure.com`.
-1. Navigate to the resource group containing your Foundry resource and AI Search resources.
-1. On the toolbar, select **Delete resource group**.
-1. Enter the resource group name and confirm that you want to delete it.
