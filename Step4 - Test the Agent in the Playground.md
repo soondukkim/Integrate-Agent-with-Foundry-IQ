@@ -1,308 +1,75 @@
-## Test the Agent in the playground
+## Playground 에서 테스트
 
-Before connecting from code, test your agent in the portal playground.
+코드로 연결하기 전에 포털 플레이그라운드에서 에이전트를 테스트해 보세요.
 
-1. Navigate back to your agent on the **Build** > **Agents** page, and select the agent you created.
-2. In the agent page, you should see a playground tab selected. Find the knowledge section and add Foundry IQ, selecting the connection and knowledge base you created.
-1. Try the following test queries to verify the agent can retrieve information from the knowledge base:
-    - `What types of tents does Contoso offer?`
-    - `Tell me about which backpacks are available in XL.`
-    - `What camping accessories are available?`
+1. **빌드** > **에이전트** 페이지에서 생성한 에이전트를 선택하세요.
+1. 에이전트 페이지에서 플레이그라운드 탭이 선택된 것을 볼 수 있을 것입니다. 지식 섹션을 찾아 앞에서 생성한 **지식 기반 (Foundry IQ)** 을 선택하고 **저장** 하세요.
 
-1. Review the responses and notice:
-    - The agent provides specific information from the knowledge base
-    - Citations or references to the source documents may be included
-    - The agent stays focused on product information
+   <img width="531" height="307" alt="image" src="https://github.com/user-attachments/assets/c2022869-f7f6-434c-bbe2-a16532a58258" />
 
-1. You can also try interacting with your agent in the **Preview agent** for a more refined webapp experience.
 
-1. In the agent details page, locate and copy the following information to a notepad (you'll need these later):
-    - **Agent name**: This is the name you created (`product-expert-agent`)
-    - **Project endpoint**: Found in the project settings or home page
+1. 다음 테스트 쿼리를 시도해 에이전트가 지식 베이스에서 정보를 가져올 수 있는지 확인해 보세요 :
+    - `Contoso 는 어떤 종류의 텐트를 제공하나요?`
+    - `XL 사이즈로 구매 가능한 백팩에 대해 알려주세요.`
+    - `데이팩과 익스페디션 백팩의 차이점은 무엇인가요?`
 
-### Configure the agent to require approval for tool calls
+    <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/511de723-bd71-4e66-b965-e0a0ad19075d" />
 
-When you create an agent in the portal, its Foundry IQ (knowledge) tool runs **without** asking for approval by default. To ensure your app can review and control each knowledge base lookup, you'll change the agent to require approval before it uses tools with the Foundry Toolkit for VS Code extension.
+    - 답변에 대한 **추적** 을 통해 에이전트의 작업 경로를 확인하세요
+         
+    <img width="1690" height="1037" alt="image" src="https://github.com/user-attachments/assets/bdacfdd3-74ed-4d52-a94b-3fe3ee94a06a" />
 
-> **Note**: The Foundry portal doesn't currently expose a setting to change this approval behavior, so you'll configure it from the Foundry Toolkit extension instead.
+1. **게시** > **웹앱 미리보기** 를 통해서도 확인해 보세요 :
 
-1. In Visual Studio Code, select **Extensions** from the left pane (or press **Ctrl+Shift+X**), then search the marketplace for the `Foundry Toolkit for VS Code` extension from Microsoft and select **Install** (if it isn't already installed).
+   <img width="480" height="385" alt="image" src="https://github.com/user-attachments/assets/e17b9eec-8f58-4525-832f-950e9fe7f7a5" />
 
-    > **Note**: The extension is currently listed as **Foundry Toolkit**, but some VS Code labels, commands, or older screenshots may still refer to **AI Toolkit**. In this lab, treat those names as referring to the same extension experience.
+    - `캠핑 용품에는 어떤 것들이 있나요?`
 
-1. Select the **Foundry Toolkit** icon in the sidebar, and sign in to your Azure account if you're prompted.
-   
-    > **Note**: If you're unable to sign in with the Foundry Toolkit extension, you my need to select the Azure extension. Sign in there, then navigate back to the Foundry Toolkit to access your resources.
+    <img width="2000" height="1075" alt="image" src="https://github.com/user-attachments/assets/70bda2c5-0c11-4c76-9aa0-a492de4540cd" />
 
-1. Under **Microsoft Foundry Resources**, choose **Set Default Project** and select the project you created earlier.
-1. Expand the project section. Under **Prompt Agents**, select your `product-expert-agent` agent to open the **Agent Builder** window.
-1. In the **Tools** section, add the **Azure AI Search** tool, and then select the connection and knowledge base you created earlier.
+1. 답변을 검토하고 다음을 참고하세요 :
+    - 에이전트는 지식 기반에서 구체적인 정보를 제공합니다
+    - 출처 문서에 대한 인용이나 참고문헌이 포함될 수 있습니다
+    - 에이전트은 제품 정보에 집중합니다
 
-    > **Note**: The agent may list more than one tool. The Foundry portal adds a **Web search** tool to new agents by default, so be sure to select the three dots on the **Azure AI Search** tool for your knowledge base rather than another tool.
-1. In the **Require approval before using tools** dropdown, select **Ask for approval for all tools**, and save your changes if you're prompted.
 
-Your agent will now request approval each time it uses Foundry IQ to search the knowledge base, which the client app you complete next will handle.
+Foundry IQ 옵션을 변경하고 테스트해 보세요.
 
-## Connect to your agent from an app
-
-Now you'll create a Python application to interact with your agent programmatically. Starter files have been provided in the GitHub repository to help you get started quickly.
-
-### Prepare to develop an app in Visual Studio Code
-
-Now let's use Visual Studio Code to develop an app. The code files for your app have been provided in a GitHub repo.
-
-1. Start Visual Studio Code, and open the command palette (Shift+Ctrl+P). Then search for and run the **Git: Clone** command to clone the `https://github.com/MicrosoftLearning/mslearn-ai-agents` repo to a local folder (it doesn't matter which folder).
-1. When the repository has been cloned, open the folder in Visual Studio Code.
-
-    > **Note**: If Visual Studio Code shows you a pop-up message prompting you to trust the code you are opening, click **Yes, I trust the authors** option to continue.
-
-1. Wait while additional files are installed to support the Python code projects in the repo (if prompted).
-
-    > **Note**: If you are prompted to install required assets to build and debug, select **Not Now**.
-
-1. In the **Explorer** pane, expand the **Labfiles/04-integrate-agent-with-foundry-iq/Python** folder.
-
-    The provided files include application code, configuration settings, and the agent client starter code.
-
-### Configure the application settings
-
-1. In Visual Studio Code, in the **Labfiles/04-integrate-agent-with-foundry-iq/Python** folder, open the **.env** configuration file.
-1. In the code file, replace the **your_project_endpoint** placeholder with the endpoint for your project (copied from the project **Home** page in the Foundry portal) and ensure that the AGENT_NAME variable is set to your agent name (which should be *product-expert-agent*).
-1. After you've replaced the placeholder, save the file.
-
-### Complete the agent client code
-
-> **Tip**: As you add code, be sure to maintain the correct indentation. Use the comment indentation levels as a guide.
-
-1. In Visual Studio Code, in the **Labfiles/04-integrate-agent-with-foundry-iq/Python** folder, open the **agent_client.py** code file.
-1. Review the starter code that has been provided, including:
-    - Import statements and configuration loading
-    - The `send_message_to_agent()` function structure
-    - The `display_conversation_history()` function
+1. 지식 메뉴에서 생성한 **지식 기반 (Foundry IQ)** 를 선택하세요.
+1. 지식 기반 옵션을 변경하세요 :
+    - **검색 추론 작업** : 중간
+    - **출력 모드** : 응답 생성
+    - **지침에 답하기** : `전문가 답게 답변을 하고, 답변의 마지막에 전체 내용에 대한 요약을 한 문단으로 추가해주세요.`
     - The main program loop
+      
+1. 에이전트 메뉴에서 생성한 에이전트를 선택하세요.
+1. 다음 테스트 쿼리를 시도해 먼저 질문의 답변과 어떻게 다른지 확인해 보세요 :
+    - `Contoso 는 어떤 종류의 텐트를 제공하나요?`
+    - `XL 사이즈로 구매 가능한 백팩에 대해 알려주세요.`
+    - `캠핑 용품에는 어떤 것들이 있나요?`
+    - `데이팩과 익스페디션 백팩의 차이점은 무엇인가요?`
 
-1. Find the first **TODO** comment and add the following code to connect to the project, get the OpenAI client, retrieve the agent, and create a new conversation:
+Azure Portal 에서 Foundry IQ 를 테스트해 보세요.
 
-    > **Tip**: Be careful to maintain the correct indentation level.
+1. Azure Portal 'portal.azure.com' 탭으로 이동하세요.
+1. 상단의 검색 창에서 **AI Search(Foundry IQ)** 를 검색하고, 만들어 놓은 **Search Service(Foundry IQ)** 를 선택하세요.
 
-    ```python
-    # Connect to the project and agent
-    credential = DefaultAzureCredential(
-        exclude_environment_credential=True,
-        exclude_managed_identity_credential=True
-    )
-    project_client = AIProjectClient(
-        credential=credential,
-        endpoint=project_endpoint
-    )
+   <img width="1532" height="469" alt="image" src="https://github.com/user-attachments/assets/b676c600-6adf-4da2-867d-2912f34154df" />
 
-    # Get the OpenAI client
-    openai_client = project_client.get_openai_client()
+1. **에이전트 검색** > **지식 기반** 에서 만들어 놓은 지식 기반 'kb-contosoproducts-OO' 을 선택하세요.
+1. 지식 기반의 플레이그라운드를 확인할 수 있습니다.
+1. 다음 테스트 쿼리를 시도해 먼저 질문의 답변과 어떻게 다른지 확인해 보세요 :
+    - `백패킹 텐트와 돔 텐트의 특징을 비교해 주세요.`
+    - `방수 기능이 되는 텐트의 종류별 특징과 가격을 알려주세요.`
+    - `데이팩과 익스페디션 백팩의 차이점은 무엇인가요?`
 
-    # Get the agent
-    agent = project_client.agents.get(agent_name=agent_name)
-    print(f"Connected to agent: {agent.name} (id: {agent.id})\n")
+1. 답변을 검토하고 다음을 참고하세요 :
+    - Foundry IQ 옵션 변경에 따라 답변이 달라집니다.
+    - Azure Portal 의 지식 기반에서 더 구체적인 참조자료를 확인 및 디버그를 할 수 있습니다.
 
-    # Create a new conversation
-    conversation = openai_client.conversations.create(items=[])
-    print(f"Created conversation (id: {conversation.id})\n")
-    ```
+1. 다음 정보를 찾아 메모장에 복사하세요(나중에 필요할 것입니다):
+    - **에이전트 이름**: 앞에서 만든 이름입니다 (`OO-product-expert-agent`)
+    - **프로젝트 엔드포인트**: 프로젝트 설정 또는 홈페이지에서 찾을 수 있습니다
 
-1. Find the second **TODO** comment inside the `send_message_to_agent()` function and add the following code to send messages and handle responses, including MCP approval requests:
+   <img width="2000" height="1125" alt="image" src="https://github.com/user-attachments/assets/0653f2ae-6459-4a5e-b7ed-c2611180a2f8" />
 
-    ```python
-    # Add user message to the conversation
-    openai_client.conversations.items.create(
-        conversation_id=conversation.id,
-        items=[{"type": "message", "role": "user", "content": user_message}],
-    )
-    
-    # Store in conversation history (client-side)
-    conversation_history.append({
-        "role": "user",
-        "content": user_message
-    })
-    
-    # Create a response using the agent
-    response = openai_client.responses.create(
-        conversation=conversation.id,
-        extra_body={"agent_reference": {"name": agent.name, "type": "agent_reference"}},
-        input=""
-    )
-
-    # Check if the response output contains an MCP approval request
-    approval_request = None
-    if hasattr(response, 'output') and response.output:
-        for item in response.output:
-            if hasattr(item, 'type') and item.type == 'mcp_approval_request':
-                approval_request = item
-                break
-    
-    # Handle approval request if present
-    if approval_request:
-        print(f"[Approval required for: {approval_request.name}]\n")
-        print(f"Server: {approval_request.server_label}")
-        
-        # Parse and display the arguments (optional, for transparency)
-        import json
-        try:
-            args = json.loads(approval_request.arguments)
-            print(f"Arguments: {json.dumps(args, indent=2)}\n")
-        except:
-            print(f"Arguments: {approval_request.arguments}\n")
-        
-        # Prompt user for approval
-        approval_input = input("Approve this action? (yes/no): ").strip().lower()
-        
-        if approval_input in ['yes', 'y']:
-            print("Approving action...\n")
-            
-            # Create approval response item
-            approval_response = {
-                "type": "mcp_approval_response",
-                "approval_request_id": approval_request.id,
-                "approve": True
-            }
-        else:
-            print("Action denied.\n")
-            
-            # Create denial response item
-            approval_response = {
-                "type": "mcp_approval_response",
-                "approval_request_id": approval_request.id,
-                "approve": False
-            }
-        
-        # Add the approval response to the conversation
-        openai_client.conversations.items.create(
-            conversation_id=conversation.id,
-            items=[approval_response]
-        )
-        
-        # Get the actual response after approval/denial
-        response = openai_client.responses.create(
-            conversation=conversation.id,
-            extra_body={"agent_reference": {"name": agent.name, "type": "agent_reference"}},
-            input=""
-        )
-    
-    ```
-
-1. After you've added the code, save the file.
-
-1. Review the code now uses the conversations API to manage interactions with your agent, where:
-    - A conversation is created and tracked by its ID
-    - User messages are added to the conversation using `conversations.items.create()`
-    - Responses are generated using `responses.create()` with an agent reference
-    - **MCP approval handling**: When the agent needs to access Foundry IQ, it requests approval by returning an `mcp_approval_request` in the response output
-    - The code prompts you to approve or deny the action before proceeding
-    - After approval/denial, an `mcp_approval_response` is added to the conversation and a new response is generated
-    - The agent retrieves information from Foundry IQ based on your approval decision
-
-## Test the Integration
-
-Now you'll run your application and test the agent's ability to retrieve information from the knowledge base.
-
-1. In Visual Studio Code, open an integrated terminal for the **Labfiles/04-integrate-agent-with-foundry-iq/Python** folder by right-clicking the folder and selecting **Open in Integrated Terminal**.
-1. First, create a virtual environment and install dependencies.
-
-    ```
-   python -m venv labenv
-   ./labenv/Scripts/activate
-   pip install -r requirements.txt
-    ```
-
-1. In the terminal pane, enter the following command to sign into Azure.
-
-    ```
-    az login
-    ```
-
-    > **Note**: In most scenarios, just using *az login* will be sufficient. However, if you have subscriptions in multiple tenants, you may need to specify the tenant by using the *--tenant* parameter. See [Sign into Azure interactively using the Azure CLI](https://learn.microsoft.com/cli/azure/authenticate-azure-cli-interactively) for details.
-
-1. When prompted, follow the instructions to open the sign-in page in a new tab and enter the authentication code provided and your Azure credentials. Then complete the sign in process in the command line, selecting the subscription containing your Foundry resource if prompted.
-
-1. In the terminal pane, run your application:
-
-    ```
-   python agent_client.py
-    ```
-
-1. When the application starts, test the agent with the following queries:
-
-    **Query 1 - Product Categories:**
-
-    ```
-    What types of outdoor products does Contoso offer?
-    ```
-
-    When prompted for approval, type **yes** to allow the agent to search the knowledge base. Observe how the agent retrieves information from multiple documents in the knowledge base.
-
-    **Query 2 - Specific Product Details:**
-
-    ```
-    Tell me about the weatherproof features of your tents.
-    ```
-
-    Approve the request and notice how the agent provides specific details from the tents catalog.
-
-    **Query 3 - Product Comparisons:**
-
-    ```
-    What's the difference between your daypacks and expedition backpacks?
-    ```
-
-    Approve the request and see how the agent can synthesize information from the backpacks guide.
-
-    **Query 4 - Accessories and Add-ons:**
-
-    ```
-    What camping accessories would you recommend for a weekend hiking trip?
-    ```
-
-    Approve the request and observe the agent's ability to provide recommendations based on the knowledge base.
-
-    **Query 5 - Follow-up Question:**
-
-    ```
-    How much do those items typically cost?
-    ```
-
-    Notice how the agent maintains conversation context from your previous query.
-
-1. Type `history` to view the complete conversation history.
-
-1. Type `quit` when you're done testing.
-
-### Review the results
-
-Consider the following aspects of the agent's responses:
-
-- **MCP Approval Flow**: Each time the agent needs to access the knowledge base, it requests approval, giving you control over external tool usage
-- **Accuracy**: The agent provides information directly from the knowledge base documents
-- **Citations**: The agent may include source references or document IDs
-- **Context awareness**: The agent remembers previous messages in the conversation
-- **Grounding**: The agent indicates when it cannot find relevant information in the knowledge base
-- **Error handling**: The application gracefully handles errors and connection issues
-
-## Summary
-
-In this exercise, you:
-
-- Created a Foundry project and agent with the new Foundry UI
-- Built a knowledge base with product information documents
-- Configured an agent in the portal with Foundry IQ enabled
-- Connected to your agent from Visual Studio Code using the Python SDK
-- Implemented a client application with MCP approval handling, conversation history, and error handling
-- Tested the agent's ability to retrieve and synthesize information from the knowledge base with user-controlled approval for external tool access
-
-This demonstrates how to integrate AI agents with Foundry IQ to create intelligent applications that can search and retrieve information from enterprise knowledge bases while maintaining conversational context.
-
-## Clean up
-
-If you've finished exploring Azure AI Agent Service and Foundry IQ, you should delete the resources you have created in this exercise to avoid incurring unnecessary Azure costs.
-
-1. In a web browser, open the [Azure portal](https://portal.azure.com) at `https://portal.azure.com`.
-1. Navigate to the resource group containing your Foundry resource and AI Search resources.
-1. On the toolbar, select **Delete resource group**.
-1. Enter the resource group name and confirm that you want to delete it.
