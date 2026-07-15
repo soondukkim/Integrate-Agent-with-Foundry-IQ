@@ -74,7 +74,7 @@
 
 <br>
 
-    > **팁**: 들여쓰기 수준을 올바르게 유지하도록 주의하세요.
+> **팁**: 들여쓰기 수준을 올바르게 유지하도록 주의하세요.
 
     ```python
     # Connect to the project and agent
