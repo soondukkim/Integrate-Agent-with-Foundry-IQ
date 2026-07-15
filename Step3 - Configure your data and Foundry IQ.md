@@ -133,7 +133,7 @@ Foundry Portal 에서 에이전트와 연결할 지식 기반을 생성합니다
 
 ## 다음 단계
 
-* [Step 04. Foundry 에이전트, AI Search 지식 기반 에서 테스트](Step4%20-%20Test%20the%20Agent%20in%20the%20Playground.md)
+* [Step 04. 다양한 환경에서 Foundry IQ 테스트](Step4%20-%20Test%20the%20Agent%20in%20the%20Playground.md)
 
 ## 실습 순서
 
