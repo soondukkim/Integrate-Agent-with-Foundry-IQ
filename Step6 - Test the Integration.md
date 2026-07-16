@@ -60,8 +60,7 @@
 
    <br>
 
-        ```
-   
+   ```
         # Connect to the project and agent
         credential = DefaultAzureCredential(
             exclude_environment_credential=True,
@@ -83,11 +82,12 @@
         conversation = openai_client.conversations.create(items=[])
         print(f"Created conversation (id: {conversation.id})\n")
 
-        ```
+   ```
+
 
 1. `send_message_to_agent()` 함수 내 두 번째 **TODO** 주석을 찾아 메시지를 보내고 응답을 처리하는 코드를 추가하세요. MCP 승인 요청을 포함합니다 :
  
-        ```
+   ```
         # Add user message to the conversation
         openai_client.conversations.items.create(
             conversation_id=conversation.id,
@@ -163,7 +163,8 @@
                 input=""
             )
         
-        ```
+   ```
+
     
 1. 코드를 추가한 후에는 파일을 **저장**하세요.
 
