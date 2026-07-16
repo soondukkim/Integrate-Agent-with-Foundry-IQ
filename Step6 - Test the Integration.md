@@ -61,26 +61,26 @@
    <br>
 
    ```
-     # Connect to the project and agent
-     credential = DefaultAzureCredential(
-         exclude_environment_credential=True,
-         exclude_managed_identity_credential=True
-     )
-     project_client = AIProjectClient(
-         credential=credential,
-         endpoint=project_endpoint
-     )
+   # Connect to the project and agent
+   credential = DefaultAzureCredential(
+       exclude_environment_credential=True,
+       exclude_managed_identity_credential=True
+   )
+   project_client = AIProjectClient(
+       credential=credential,
+       endpoint=project_endpoint
+   )
    
-     # Get the OpenAI client
-     openai_client = project_client.get_openai_client()
+   # Get the OpenAI client
+   openai_client = project_client.get_openai_client()
    
-     # Get the agent
-     agent = project_client.agents.get(agent_name=agent_name)
-     print(f"Connected to agent: {agent.name} (id: {agent.id})\n")
+   # Get the agent
+   agent = project_client.agents.get(agent_name=agent_name)
+   print(f"Connected to agent: {agent.name} (id: {agent.id})\n")
    
-     # Create a new conversation
-     conversation = openai_client.conversations.create(items=[])
-     print(f"Created conversation (id: {conversation.id})\n")
+   # Create a new conversation
+   conversation = openai_client.conversations.create(items=[])
+   print(f"Created conversation (id: {conversation.id})\n")
    
    ```
 
