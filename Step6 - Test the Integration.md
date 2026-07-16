@@ -85,7 +85,7 @@
 
 1. `send_message_to_agent()` 함수 내 두 번째 **TODO** 주석을 찾아 메시지를 보내고 응답을 처리하는 코드를 추가하세요. MCP 승인 요청을 포함합니다 :
  
-        ```python
+        ```
         # Add user message to the conversation
         openai_client.conversations.items.create(
             conversation_id=conversation.id,
