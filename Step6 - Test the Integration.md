@@ -80,89 +80,87 @@
    
    # Create a new conversation
    conversation = openai_client.conversations.create(items=[])
-   print(f"Created conversation (id: {conversation.id})\n")
-   
+   print(f"Created conversation (id: {conversation.id})\n")   
    ```
 
 
 1. `send_message_to_agent()` 함수 내 두 번째 **TODO** 주석을 찾아 메시지를 보내고 응답을 처리하는 코드를 추가하세요. MCP 승인 요청을 포함합니다 :
  
    ```
-        # Add user message to the conversation
-        openai_client.conversations.items.create(
-            conversation_id=conversation.id,
-            items=[{"type": "message", "role": "user", "content": user_message}],
-        )
-        
-        # Store in conversation history (client-side)
-        conversation_history.append({
-            "role": "user",
-            "content": user_message
-        })
-        
-        # Create a response using the agent
-        response = openai_client.responses.create(
-            conversation=conversation.id,
-            extra_body={"agent_reference": {"name": agent.name, "type": "agent_reference"}},
-            input=""
-        )
-    
-        # Check if the response output contains an MCP approval request
-        approval_request = None
-        if hasattr(response, 'output') and response.output:
-            for item in response.output:
-                if hasattr(item, 'type') and item.type == 'mcp_approval_request':
-                    approval_request = item
-                    break
-        
-        # Handle approval request if present
-        if approval_request:
-            print(f"[Approval required for: {approval_request.name}]\n")
-            print(f"Server: {approval_request.server_label}")
-            
-            # Parse and display the arguments (optional, for transparency)
-            import json
-            try:
-                args = json.loads(approval_request.arguments)
-                print(f"Arguments: {json.dumps(args, indent=2)}\n")
-            except:
-                print(f"Arguments: {approval_request.arguments}\n")
-            
-            # Prompt user for approval
-            approval_input = input("Approve this action? (yes/no): ").strip().lower()
-            
-            if approval_input in ['yes', 'y']:
-                print("Approving action...\n")
-                
-                # Create approval response item
-                approval_response = {
-                    "type": "mcp_approval_response",
-                    "approval_request_id": approval_request.id,
-                    "approve": True
-                }
-            else:
-                print("Action denied.\n")
-                
-                # Create denial response item
-                approval_response = {
-                    "type": "mcp_approval_response",
-                    "approval_request_id": approval_request.id,
-                    "approve": False
-                }
-            
-            # Add the approval response to the conversation
-            openai_client.conversations.items.create(
-                conversation_id=conversation.id,
-                items=[approval_response]
-            )
-            
-            # Get the actual response after approval/denial
-            response = openai_client.responses.create(
-                conversation=conversation.id,
-                extra_body={"agent_reference": {"name": agent.name, "type": "agent_reference"}},
-                input=""
-            )
-        
+   # Add user message to the conversation
+   openai_client.conversations.items.create(
+       conversation_id=conversation.id,
+       items=[{"type": "message", "role": "user", "content": user_message}],
+   )
+     
+   # Store in conversation history (client-side)
+   conversation_history.append({
+       "role": "user",
+       "content": user_message
+   })
+     
+   # Create a response using the agent
+   response = openai_client.responses.create(
+       conversation=conversation.id,
+       extra_body={"agent_reference": {"name": agent.name, "type": "agent_reference"}},
+       input=""
+   )
+   
+   # Check if the response output contains an MCP approval request
+   approval_request = None
+   if hasattr(response, 'output') and response.output:
+       for item in response.output:
+           if hasattr(item, 'type') and item.type == 'mcp_approval_request':
+               approval_request = item
+               break
+     
+   # Handle approval request if present
+   if approval_request:
+       print(f"[Approval required for: {approval_request.name}]\n")
+       print(f"Server: {approval_request.server_label}")
+         
+       # Parse and display the arguments (optional, for transparency)
+       import json
+       try:
+           args = json.loads(approval_request.arguments)
+           print(f"Arguments: {json.dumps(args, indent=2)}\n")
+       except:
+           print(f"Arguments: {approval_request.arguments}\n")
+         
+       # Prompt user for approval
+       approval_input = input("Approve this action? (yes/no): ").strip().lower()
+         
+       if approval_input in ['yes', 'y']:
+           print("Approving action...\n")
+             
+           # Create approval response item
+           approval_response = {
+               "type": "mcp_approval_response",
+               "approval_request_id": approval_request.id,
+               "approve": True
+           }
+       else:
+           print("Action denied.\n")
+             
+           # Create denial response item
+           approval_response = {
+               "type": "mcp_approval_response",
+               "approval_request_id": approval_request.id,
+               "approve": False
+           }
+         
+       # Add the approval response to the conversation
+       openai_client.conversations.items.create(
+           conversation_id=conversation.id,
+           items=[approval_response]
+       )
+         
+       # Get the actual response after approval/denial
+       response = openai_client.responses.create(
+           conversation=conversation.id,
+           extra_body={"agent_reference": {"name": agent.name, "type": "agent_reference"}},
+           input=""
+       )     
    ```
 
     
